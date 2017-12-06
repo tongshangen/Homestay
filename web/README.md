@@ -1,4 +1,4 @@
-# wep
+# web
 
 > A Vue.js project
 
