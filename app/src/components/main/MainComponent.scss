@@ -12,7 +12,7 @@ html,body{
 	flex-direction:column;
 }
 .main{
-	flex: 9;
+	flex:1;
 	overflow-x:hidden;
 	header{
 
@@ -111,21 +111,23 @@ html,body{
 							line-height: 45px;
 							color:#333333;
 							font-size: 22px;
+						}
 							>p{
 								color:#84868C;
-								font-size:16px;
+								font-size:24px;
 							}
 							.star{
 								>ul{
-									li{
+									>li{
 										float: left;
 										width: 25px;height: 25px;
-										background:#F7A621;
-										flex: 1;
+										i{
+										   color:#F7A621;
+										}
 									}
 								}
 							}
-						}
+						
 					}
 					.like_right{
 						width: 196px;
@@ -186,8 +188,8 @@ html,body{
 	}
 }
 footer{
-	flex: 1;
-	height: 236px;
+	// flex: 1;
+	height: 100px;
 	ul{
 		display: flex;
 		li{
