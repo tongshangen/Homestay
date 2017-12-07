@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MainComponent></MainComponent>
+    <!-- <MainComponent></MainComponent> -->
 
     <!--  下面div为测试能否引入element.ui 记得删除 
     <div>
@@ -16,14 +16,10 @@
 </template>
 
 <script>
-  import MainComponent from "./components/main/MainComponent.vue"
   export default {
     name: 'app',
     data () {
       return {}
-    },
-    components: {
-        MainComponent
-      }
+    }
   }
 </script>

@@ -13,7 +13,7 @@
 					<div class="hot_city">
 						<h2>- 热门城市 -</h2>
 						<ul>
-							<li>
+							<li id="city">
 								<img src="../../assets/hot_city1.png">
 								<p>京都</p>
 							</li>
@@ -42,11 +42,11 @@
 											<p>整套-7张床-可住7人-京都市</p>
 											<div class="star">
 												<ul>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
 												</ul>
 												<p class="pinjia">15人评价</p>
 											</div>
@@ -65,11 +65,11 @@
 											<p>整套-7张床-可住7人-京都市</p>
 											<div class="star">
 												<ul>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
-													<li class="el-icon-star-off"></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
 												</ul>
 												<p class="pinjia">15人评价</p>
 											</div>
@@ -132,7 +132,6 @@
 	import './MainComponent.scss'
 
 	export default {
-		
 	}
 
 </script>
