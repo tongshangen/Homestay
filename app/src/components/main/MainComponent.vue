@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-	<div class="Main">
-		<h3>hello</h3>
-=======
 	<div class="Main">		
 			<div class="main">
 				<header>
@@ -129,26 +125,13 @@
 						<li><i class="el-icon-goods"></i>我的</li>
 					</ul>
 			</footer>
->>>>>>> 7e643216153cc9c33438de569b538db9aea2d246
 	</div>
 </template>
 
 <script type="text/javascript">
-	// import './MainComponent.scss'
+	import './MainComponent.scss'
 
 	export default {
-<<<<<<< HEAD
-	    // methods: {
-	    //   handleOpen(key, keyPath) {
-	    //     console.log(key, keyPath);
-	    //   },
-	    //   handleClose(key, keyPath) {
-	    //     console.log(key, keyPath);
-	    //   }
-	    // }
-=======
-		
->>>>>>> 7e643216153cc9c33438de569b538db9aea2d246
 	}
 
 </script>
