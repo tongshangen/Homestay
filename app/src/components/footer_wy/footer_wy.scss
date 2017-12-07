@@ -1,0 +1,16 @@
+.footer{
+    margin-top: 910px;
+    ul{
+        display: flex;
+        li{
+            flex: 1;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+        }
+        li.active{
+            // color: #409EFF;
+            color: #ff6163;
+        }
+    }
+}
