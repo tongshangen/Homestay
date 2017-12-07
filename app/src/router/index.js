@@ -13,6 +13,7 @@ var router = new VueRouter({
             path: '/',
             name: 'main',
             component: MainComponent,
+            
         },
         {
             path: '/register',
