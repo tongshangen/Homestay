@@ -1,0 +1,24 @@
+#main_housefac{
+    h3{
+        font-size: 36px;
+        font-weight: normal;
+        margin: 90px 0 16px 20px;
+    }
+    ul{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        li{
+            font-size: 30px;
+            height: 60px;
+            line-height: 50px;
+            flex: 24%;
+            display: inline-block;
+            border:0 none;
+            // padding: 18px;
+            margin: 2%;
+            background: #eee;
+            text-align: center;
+        }
+    }
+}

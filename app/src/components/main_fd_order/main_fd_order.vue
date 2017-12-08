@@ -9,29 +9,51 @@
             <Nav_wy></Nav_wy>
             <router-view></router-view>
         </div>
-        <div id="footer">
-            <Footer_wy></Footer_wy> 
-            <router-view></router-view> 
+        <div id="main">
+            <ul>
+                <li>
+                    <div class="order_header">
+                        <h3>香奈儿</h3>
+                    </div>
+                    <div class="order_main">
+                        <div class="order_main_l">
+                            <p>11月12日-11月14日</p>
+                            <p>总价：<span><i>￥</i>312</span></p>
+                        </div>
+                        <div class="order_main_r">
+                            <img src="../../assets/nav_logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="order_footer"></div>
+                </li>
+                <li>
+                    <div class="order_header">
+                        <h3>香奈儿</h3>
+                    </div>
+                    <div class="order_main">
+                        <div class="order_main_l">
+                            <p>11月12日-11月14日</p>
+                            <p>总价：<span><i>￥</i>312</span></p>
+                        </div>
+                        <div class="order_main_r">
+                            <img src="../../assets/nav_logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="order_footer"></div>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
-    var wd = document.documentElement.clientWidth*window.devicePixelRatio/10;
-    // document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
-    var scale = 1/window.devicePixelRatio;
-    var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
-    document.getElementById("vp").content = mstr;
-
     import './main_fd_order.scss'
     import Nav_wy from '../nav_wy/nav_wy.vue'
-    import Footer_wy from '../footer_wy/footer_wy.vue'
 
     export default {
         name: 'nav',
         components: {
-            Nav_wy,
-            Footer_wy
+            Nav_wy
         }
     }
 </script>
