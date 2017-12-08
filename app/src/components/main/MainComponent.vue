@@ -7,7 +7,7 @@
 				</div>
 				<div class="sherch">
 					<i class="el-icon-search"></i>
-					<input type="text" id="sherch" placeholder="搜索想去的目的地、景点">
+					<input type="text" id="sherch" placeholder="搜索想去的目的地、景点" @click="sherch">
 				</div>
 			</header>
 			<div class="hot_city">
@@ -130,8 +130,15 @@
 
 <script type="text/javascript">
 	import './MainComponent.scss'
+	import  axios from 'axios';
+	import qs from 'qs'
 
 	export default {
+		methods:{
+			sherch:function(){
+				console.log(666);
+			}
+		}
 	}
 
 </script>
