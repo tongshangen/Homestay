@@ -24,6 +24,8 @@
     var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
     document.getElementById("vp").content = mstr;
 
+    import './main_wy.scss'
+
     // 导入子组件
     import main_fd_order from '../main_fd_order/main_fd_order.vue'
     import message_wy from '../message_wy/message_wy.vue'

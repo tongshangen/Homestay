@@ -19,14 +19,14 @@
 
     export default {
         data() {
-        return {
-            activeName: 'second'
-        };
+            return {
+                activeName: 'second'
+            };
         },
         methods: {
-        handleClick(tab, event) {
-            // console.log(tab, event);
-        }
+            handleClick(tab, event) {
+                // console.log(tab, event);
+            }
         }
     };
 </script>
