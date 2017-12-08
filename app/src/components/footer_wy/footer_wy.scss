@@ -1,7 +1,14 @@
+body{
+    position: relative;
+    width: 100%;
+}
 .footer{
-    margin-top: 910px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     ul{
         display: flex;
+        width: 100%;
         li{
             flex: 1;
             font-size: 20px;
@@ -9,7 +16,6 @@
             line-height: 40px;
         }
         li.active{
-            // color: #409EFF;
             color: #ff6163;
         }
     }

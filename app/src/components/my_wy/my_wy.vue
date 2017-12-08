@@ -2,31 +2,38 @@
     <div class="main_fd_order">
         <div id="header">
             <div class="header_my">
-                <div><i class="el-icon-bell"></i></div>
-                <div><i class="el-icon-setting"></i></div>
+                <div class="head_l"><i class="el-icon-bell"></i></div>
+                <div class="head_r"><i class="el-icon-setting"></i></div>
             </div>
         </div>
-        <div id="footer">
-            <Footer_wy></Footer_wy> 
-            <router-view></router-view> 
+        <div id="main">
+            <div class="main_header">
+                <a><img src="../../assets/logo_wy.png" alt=""></a>
+                <a><span>登录/注册</span></a>
+            </div>
+            <div class="main_con">
+                <ul>
+                    <li>
+                        <i class="el-icon-printer"></i>
+                        <span>我的订单</span>
+                        <i class="el-icon-arrow-right"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_footer">
+                <i class="el-icon-refresh"></i>
+                <span>切换为房客</span>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-    var wd = document.documentElement.clientWidth*window.devicePixelRatio/10;
-    // document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
-    var scale = 1/window.devicePixelRatio;
-    var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
-    document.getElementById("vp").content = mstr;
-
     import './my_wy.scss'
-    import Footer_wy from '../footer_wy/footer_wy.vue'
 
     export default {
         name: 'nav',
         components: {
-            Footer_wy
         }
     }
 </script>
