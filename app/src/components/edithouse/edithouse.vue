@@ -6,7 +6,18 @@
             <a>预览</a>
         </div>
         <div id="main_edithouse">
-            <div class="pic"></div>
+            <div class="pic">
+                <el-upload
+                    action="https://jsonplaceholder.typicode.com/posts/"
+                    list-type="picture-card"
+                    :on-preview="handlePictureCardPreview"
+                    :on-remove="handleRemove">
+                    <i class="el-icon-plus"></i>
+                </el-upload>
+                <el-dialog :visible.sync="dialogVisible" size="tiny">
+                    <img width="100%" :src="dialogImageUrl" alt="">
+                </el-dialog>
+            </div>
             <ul>
                 <li @click="housedescribe">
                     <div class="left">
@@ -96,6 +107,12 @@
 <script>
     import './edithouse.scss'
     export default {
+        data: function(){
+            return {
+                dialogImageUrl: '',
+                dialogVisible: false
+            }
+        },
         methods: {
             back: function(){
                 history.back();
@@ -111,6 +128,13 @@
             },
             housefacility: function(){
                 this.$router.push({name:'housefacility'});
+            },
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
+            },
+            handlePictureCardPreview(file) {
+                this.dialogImageUrl = file.url;
+                this.dialogVisible = true;
             }
         },
         mounted: function(){
