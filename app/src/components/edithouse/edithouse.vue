@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="header_edithouse">
-            <i class="el-icon-back"></i>
+            <i class="el-icon-back" @click="back"></i>
             <span>编辑房源</span>
             <a>预览</a>
         </div>
@@ -82,7 +82,13 @@
                         <i class="el-icon-arrow-right"></i>
                     </div>
                 </li>
-            </ul>      
+            </ul>
+            <div class="edit">
+                <input type="button" value="删除房源">
+            </div>
+        </div>
+        <div id="footer_edithouse">
+            <p>发布房源</p>
         </div>
     </div>
 </template>
@@ -91,6 +97,9 @@
     import './edithouse.scss'
     export default {
         methods: {
+            back: function(){
+                history.back();
+            },
             housedescribe: function(){
                 this.$router.push({name:'housedescribe'});
             },
@@ -103,6 +112,11 @@
             housefacility: function(){
                 this.$router.push({name:'housefacility'});
             }
+        },
+        mounted: function(){
+            // this.title = localStorage.getItem('title');
+            // console.log(this);
+            // console.log(this.$store.state.housedes,this.$store.state.houseinfo);
         }
     }
 </script>

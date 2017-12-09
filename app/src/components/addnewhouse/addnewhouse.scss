@@ -3,17 +3,21 @@
     padding: 10px;
     line-height: 40px;
     a{
-        color: #ff6163;
-        float: right;
-        font-size: 28px;
-        margin-right: 10px;
+        .next{
+            color: #ff6163;
+            float: right;
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        
     }
 }
 
 #main_newhouse{
-    margin-top: 100px; 
+    margin-top: 30px; 
     .space{
         h3{
+            padding-left: 10px;
             font-size: 36px;
             // font-weight: normal;
         }
@@ -44,6 +48,7 @@
     .house{
         h3{
             font-size: 36px;
+            padding-left: 10px;
             // font-weight: normal;
         }
         ul{

@@ -13,7 +13,7 @@
                     <!-- <textarea name="" id="" style="border:0;overflow:hidden;"></textarea> -->
                 </div>
                 <div class="cont">
-                    <input type="text" placeholder="吸引人的标题: 地点+房源描述词">
+                    <input type="text" placeholder="吸引人的标题: 地点+房源描述词" v-model="title">
                     <!-- <p>吸引人的标题: 地点+房源描述词</p> -->
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="cont">
                     <!-- <input type="text" placeholder="告诉大家房子的特点"> -->
-                    <textarea name="" id="" placeholder="告诉大家房子的特点"></textarea>
+                    <textarea name="" id="" placeholder="告诉大家房子的特点" v-model="special"></textarea>
                     <!-- <p>告诉大家房子的特点</p> -->
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="cont">
                     <!-- <input type="text" placeholder="可以添加一些交通、周边等信息"> -->
-                    <textarea name="" id="" placeholder="可以添加一些交通、周边等信息"></textarea>
+                    <textarea name="" id="" placeholder="可以添加一些交通、周边等信息" v-model="cont"></textarea>
                     <!-- <p>可以添加一些交通、周边等信息</p> -->
                 </div>
             </div>
@@ -45,12 +45,24 @@
     import './housedescribe.scss'
 
     export default {
+        data: function(){
+            return {
+                title:'',
+                special:'',
+                cont:''
+            }
+        },
         methods: {
             back: function(){
                 history.back();
             },
             save: function(){
-
+                this.$store.state.housedes.title = this.title;
+                this.$store.state.housedes.special = this.special;
+                this.$store.state.housedes.cont = this.cont;
+                // localStorage.setItem('title' , this.title);
+                this.$store.dispatch('increment');
+                this.$router.push({name:'edithouse'});
             }
         }
     }

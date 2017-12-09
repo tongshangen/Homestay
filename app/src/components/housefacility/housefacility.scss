@@ -1,8 +1,15 @@
+html,body{
+    position: relative;
+}
 #header_fac{
     font-size: 36px;
     padding: 10px;
     height: 86px;
     line-height: 86px;
+    position: fixed;
+    top:0;
+    background: #fff;
+    width: 100%;
     span{
         margin-left: 0;
     }
@@ -13,6 +20,7 @@
     }
 }
 #main_housefac{
+    margin-top: 100px;
     h3{
         font-size: 36px;
         font-weight: normal;
