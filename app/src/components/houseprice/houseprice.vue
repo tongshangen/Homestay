@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div id="header">
+        <div id="header_houseprice">
             <span><i class="el-icon-back" @click="back"></i></span>
             <a @click="save">保存</a>
         </div>
-        <div id="main">
+        <div id="main_houseprice">
             <div class="baseprice">
                 <h3>基础费用</h3>
                 <ul>

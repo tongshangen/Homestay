@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="header">
+        <div id="header_fac">
             <span><i class="el-icon-back" @click="back"></i></span>
             <a @click="save">保存</a>
         </div>

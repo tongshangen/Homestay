@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div id="header">
+        <div id="header_edithouse">
             <i class="el-icon-back"></i>
             <span>编辑房源</span>
             <a>预览</a>
         </div>
-        <div id="main">
+        <div id="main_edithouse">
             <div class="pic"></div>
             <ul>
                 <li @click="housedescribe">

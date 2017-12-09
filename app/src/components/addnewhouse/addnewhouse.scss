@@ -1,6 +1,7 @@
 #header{
     font-size: 32px;
     padding: 10px;
+    line-height: 40px;
     a{
         color: #ff6163;
         float: right;
@@ -9,16 +10,19 @@
     }
 }
 
-#main{
+#main_newhouse{
+    margin-top: 100px; 
     .space{
         h3{
             font-size: 36px;
-            font-weight: normal;
+            // font-weight: normal;
         }
         ul{
             li{
                 overflow: hidden;
                 border-bottom: 0 none;
+                font-size: 30px; 
+                padding: 10px;
                 span{
                     color: #aaa;
                 }
@@ -40,16 +44,21 @@
     .house{
         h3{
             font-size: 36px;
-            font-weight: normal;
+            // font-weight: normal;
         }
         ul{
             li{
                 border-bottom: 0 none;
+                span{
+                    font-size: 30px;
+                    padding: 10px;
+                }
                 input{
                     float: right;
                     width: 32px;
                     height: 32px;
                     margin-top: 18px;
+                    margin-right: 10px; 
                 }
             }
         }

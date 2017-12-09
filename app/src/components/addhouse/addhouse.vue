@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div id="header">
+        <div class="header_addhouse">
             <p><i class="el-icon-back" @click="back"></i></p>
         </div>
-        <div id="main">
+        <div class="main_addhouse">
             <h3>添加房源</h3>
             <ul>
                 <li @click="addnewhouse">

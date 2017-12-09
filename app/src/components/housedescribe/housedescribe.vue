@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div id="header">
+        <div id="header_housedes">
             <span><i class="el-icon-back" @click="back"></i></span>
             <a @click="save">保存</a>
         </div>
-        <div id="main">
+        <div id="main_housedes">
             <h3>房源描述</h3>
             <div class="title">
                 <div class="header">

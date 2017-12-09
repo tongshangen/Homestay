@@ -5,7 +5,7 @@
                 <h3>我的房源<span @click="addhouse">添加</span></h3>
             </div>
         </div>
-        <div id="nav">
+        <div id="nav_house">
             <Nav_house_wy></Nav_house_wy>
             <router-view></router-view>
         </div>

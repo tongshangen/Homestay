@@ -1,8 +1,22 @@
+#header_fac{
+    font-size: 36px;
+    padding: 10px;
+    height: 86px;
+    line-height: 86px;
+    span{
+        margin-left: 0;
+    }
+    a{
+        float: right;
+        color: #ff6163;
+        margin-right: 10px;
+    }
+}
 #main_housefac{
     h3{
         font-size: 36px;
         font-weight: normal;
-        margin: 90px 0 16px 20px;
+        margin: 0px 0 16px 20px;
     }
     ul{
         display: flex;

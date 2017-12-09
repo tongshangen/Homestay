@@ -4,7 +4,7 @@
             <span><i class="el-icon-back" @click="back"></i></span>
             <a @click="next">下一步</a>
         </div>
-        <div id="main">
+        <div id="main_newhouse">
             <div class="space">
                 <h3>空间类型</h3>
                 <ul>

@@ -1,17 +1,25 @@
 html,body{
     position: relative;
 }
-#header{
+#header_edithouse{
     position: fixed;
     top:0;
     z-index: 10;
     background: #fff;
     width: 100%;
+    font-size: 36px;
+    height: 86px;
+    line-height: 86px;
     span{
         margin-left: 200px;
     }
+    a{
+        color: #ff6163;
+        float: right;
+        margin-right: 10px;
+    }
 }
-#main{
+#main_edithouse{
     // background: #eee;
     .pic{
         width: 100%;
@@ -21,11 +29,15 @@ html,body{
     ul{
         background: #fff;
         li{
+            font-size: 34px;
             overflow: hidden;
+            border:1px solid #eee;
+            padding: 10px;
             .left{
                 float: left;
                 span{
                     color: #aaa;
+                    font-size: 30px; 
                 }
             }
             .right{
