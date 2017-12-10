@@ -3,6 +3,8 @@ const state = {
     area:'',
     peoplenum:null,
     daynum:null,
+    wcnum:null,
+    bednum:null,
     staytime:'',
     leavetime:''
 }

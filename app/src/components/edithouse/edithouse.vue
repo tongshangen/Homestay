@@ -134,11 +134,13 @@
             },
             addhouse: function(){
                 axios({
-                    url: 'http://localhost:1133/room_wy.php',
+                    url: 'http://localhost:1133/room_wy_insert.php',
                     method: 'post',
                     data: qs.stringify({
                         room_name: this.$store.state.housedes.title,room_position:this.$store.state.houselocation.city,nearby:this.$store.state.houselocation.near,room_size:this.$store.state.houseinfo.area,room_type:this.$store.state.addnewhouse.spacetype,max_people:this.$store.state.houseinfo.peoplenum,price:this.$store.state.houseprice.price,
-                        device:this.$store.state.housefacility.desdata
+                        device:this.$store.state.housefacility.desdata,
+                        bed:this.$store.state.houseinfo.bednum,
+                        wc:this.$store.state.houseinfo.wcnum
                     }),
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded;'

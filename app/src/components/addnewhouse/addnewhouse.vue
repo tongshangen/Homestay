@@ -15,7 +15,7 @@
                             <span>给客人提供整套房子</span>
                         </div>
                         <div class="right">
-                            <input type="radio" v-model="space" class="space" value="zt">
+                            <input type="radio" v-model="space" class="space" value="整套">
                         </div>
                     </li>
                     <li>
@@ -24,7 +24,7 @@
                             <span>给客人提供单独房间</span>
                         </div>
                         <div class="right">
-                            <input type="radio" v-model="space" class="space" value="dj">
+                            <input type="radio" v-model="space" class="space" value="单间">
                         </div>
                     </li>
                     <li>
@@ -33,7 +33,7 @@
                             <span>与客人共用一个房间</span>
                         </div>
                         <div class="right">
-                            <input type="radio" v-model="space" class="space" value="hz">
+                            <input type="radio" v-model="space" class="space" value="合住">
                         </div>
                     </li>
                 </ul>

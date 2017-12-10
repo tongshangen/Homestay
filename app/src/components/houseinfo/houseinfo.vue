@@ -36,6 +36,24 @@
                         </div>
                     </div>
                 </li>
+                <li>
+                    <h4>卫生间数量</h4>
+                    <div class="xz">
+                        <div class="num"><span>{{wcnum}}</span>个</div>
+                        <div class="right">
+                            <span><i class="el-icon-plus" @click="addwc"></i><i class="el-icon-minus" @click="reducewc"></i></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h4>床数量</h4>
+                    <div class="xz">
+                        <div class="num"><span>{{bednum}}</span>个</div>
+                        <div class="right">
+                            <span><i class="el-icon-plus" @click="addbed"></i><i class="el-icon-minus" @click="reducebed"></i></span>
+                        </div>
+                    </div>
+                </li>
                 <ul>
                 <li>
                     <h4>最早入住时间</h4>
@@ -60,6 +78,8 @@
                 area : '',
                 peoplenum:1,
                 daynum:1,
+                wcnum:0,
+                bednum:1,
                 staytime:'',
                 leavetime:''
             }
@@ -72,6 +92,8 @@
                 this.$store.state.houseinfo.hx = this.hx;
                 this.$store.state.houseinfo.area = this.area;
                 this.$store.state.houseinfo.peoplenum = this.peoplenum;
+                this.$store.state.houseinfo.wcnum = this.wcnum;
+                this.$store.state.houseinfo.bednum = this.bednum;
                 this.$store.state.houseinfo.staytime = this.staytime; 
                 this.$store.state.houseinfo.leavetime = this.leavetime;   
                 this.$store.dispatch('increment');
@@ -96,6 +118,26 @@
             },
             addday:function(){
                 this.daynum++;
+            },
+            reducewc: function(){
+                if(this.wcnum <= 0){
+                    return;
+                }else {
+                    this.wcnum--;
+                } 
+            },
+            addwc:function(){
+                this.wcnum++;
+            },
+            reducebed: function(){
+                if(this.bednum <= 1){
+                    return;
+                }else {
+                    this.bednum--;
+                } 
+            },
+            addbed:function(){
+                this.bednum++;
             }
         }
     }
