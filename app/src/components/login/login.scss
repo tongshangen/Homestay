@@ -21,8 +21,9 @@ html,body{
 		flex:2;
 		text-align: center;
 		font-size: 48px;
+		color:#F84340;
 	}
-	.Llogin{
+	.Llogins{
 		flex:6;
 		text-align: center;
 		font-size: 36px;
@@ -50,7 +51,7 @@ html,body{
 		height: 100px;
 		line-height: 100px;
 		color:#bb7d7d;
-		#username{
+		#Lusername{
 			padding-left: 15px;
 			width: 76%;
 			height: 60px;
@@ -67,7 +68,7 @@ html,body{
 		height: 100px;
 		line-height: 100px;
 		color:#bb7d7d;
-		#password{
+		#Lpassword{
 			padding-left: 15px;
 			width: 76%;
 			height: 60px;
@@ -77,17 +78,26 @@ html,body{
 			border-bottom:1px solid #876b6b;
 		}
 	}
-	.Lregist{
+	.Llogin{
 		margin:0px 15%;
 		margin-top: 40px;
 		font-size: 38px;
 		height: 100px;
 		line-height: 100px;
 		color:#bb7d7d;
-		.Lregister{
+		.login{
 			padding-left: 15px;
 			width: 100%;
 			font-size: 38px;
 		}
+	}
+
+	.msg{
+		display: none;
+		width: 70%;
+		font-size: 30px;
+		text-align: center;
+		margin-top: 50px;
+		color:#f42828;
 	}
 }
