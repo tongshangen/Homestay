@@ -8,6 +8,9 @@
             <div class="basefacility">
                 <h3>基础设施</h3>
                 <ul>
+                    <li v-for="(value,key) in devdata" :class="{active:value.isActive}" @click="select(value)">{{value.cont}}</li>
+                </ul>
+                <!-- <ul>
                     <li>全部</li>
                     <li>电视</li>
                     <li>空调</li>
@@ -24,9 +27,9 @@
                     <li>烘干机</li>
                     <li>室内壁炉</li>
                     <li>免费早餐</li>
-                </ul>
+                </ul> -->
             </div>
-            <div class=" dailyuse">
+            <!-- <div class=" dailyuse">
                 <h3>生活用品</h3>
                 <ul>
                     <li>全部</li>
@@ -42,8 +45,8 @@
                     <li>浴缸</li>
                     <li>吹风机</li>
                 </ul>
-            </div>
-            <div class="otherfacility">
+            </div> -->
+            <!-- <div class="otherfacility">
                 <h3>其他设施</h3>
                 <ul>
                     <li>全部</li>
@@ -59,8 +62,8 @@
                     <li>烟雾探测器</li>
                     <li>CO探测器</li>
                 </ul>
-            </div>
-            <div class="state">
+            </div> -->
+            <!-- <div class="state">
                 <h3>特殊说明</h3>
                 <ul>
                     <li>全部</li>
@@ -72,7 +75,7 @@
                     <li>有养宠物</li>
                     <li>可携带小孩</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -80,11 +83,71 @@
 <script>
     import './housefacility.scss'
     export default {
+        data: function(){
+            return {
+                selectdata:[],
+                devdata:[
+                    {
+                        cont:'热水淋浴',
+                        isActive:false
+                    },
+                    {
+                        cont:'空调',
+                        isActive:false
+                    },
+                    {
+                        cont:'厨房',
+                        isActive:false
+                    },
+                    {
+                        cont:'暖气',
+                        isActive:false
+                    },
+                    {
+                        cont:'电视机',
+                        isActive:false
+                    },
+                    {
+                        cont:'无线网络',
+                        isActive:false
+                    },
+                    {
+                        cont:'可携带小孩',
+                        isActive:false
+                    },
+                    {
+                        cont:'早餐',
+                        isActive:false
+                    },
+                    {
+                        cont:'洗浴用品',
+                        isActive:false
+                    }
+                ]
+            }
+        },
         methods: {
+            select: function(item){
+                item.isActive = !item.isActive;               
+                if(this.selectdata.indexOf(item.cont) < 0){
+                    this.selectdata.push(item.cont);
+                    
+                }else{
+                    // this.selectdata.remove()
+                    this.selectdata.splice(this.selectdata.indexOf(item.cont),1);
+                }
+                // console.log(this.selectdata);
+            },
             back: function(){
                 history.back();
             },
-            save: function(){}
+            save: function(){
+                this.$store.state.housefacility.desdata = this.selectdata;
+                this.$router.push({name:'edithouse'});
+            }
+        },
+        mounted: function(){
+            // console.log(this.selectdata);
         }
     }
 </script>

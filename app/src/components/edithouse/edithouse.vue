@@ -99,13 +99,16 @@
             </div>
         </div>
         <div id="footer_edithouse">
-            <p>发布房源</p>
+            <p @click="addhouse">发布房源</p>
         </div>
     </div>
 </template>
 
 <script>
     import './edithouse.scss'
+    import axios from 'axios'
+    import qs from 'qs'
+
     export default {
         data: function(){
             return {
@@ -129,6 +132,26 @@
             housefacility: function(){
                 this.$router.push({name:'housefacility'});
             },
+            addhouse: function(){
+                axios({
+                    url: 'http://localhost:1133/room_wy.php',
+                    method: 'post',
+                    data: qs.stringify({
+                        room_name: this.$store.state.housedes.title,room_position:this.$store.state.houselocation.city,nearby:this.$store.state.houselocation.near,room_size:this.$store.state.houseinfo.area,room_type:this.$store.state.addnewhouse.spacetype,max_people:this.$store.state.houseinfo.peoplenum,price:this.$store.state.houseprice.price,
+                        device:this.$store.state.housefacility.desdata
+                    }),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;'
+                    }
+                }).then(res => {
+                    if(res.data == 'ok'){
+                        this.$router.push({name:'main_wy'});
+                    }else{
+                        alert('添加房源信息有误！');
+                    }
+                    
+                })
+            },
             handleRemove(file, fileList) {
                 console.log(file, fileList);
             },
@@ -140,7 +163,7 @@
         mounted: function(){
             // this.title = localStorage.getItem('title');
             // console.log(this);
-            // console.log(this.$store.state.housedes,this.$store.state.houseinfo);
+            // console.log(this.$store.state.housedes,this.$store.state.houseinfo,this.$store.state.houselocation,this.$store.state.houseprice,this.$store.state.housefacility);
         }
     }
 </script>

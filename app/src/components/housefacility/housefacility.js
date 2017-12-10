@@ -1,6 +1,5 @@
 const state = {
-    city:'',
-    near:''
+    desdata:[]
 }
 
 const mutations = {
