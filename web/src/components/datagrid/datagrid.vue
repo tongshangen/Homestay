@@ -34,6 +34,7 @@
                 }
             }).then(res => {
                 this.dataset = res.data;
+                console.log(res.data)
             })
         }
     }
