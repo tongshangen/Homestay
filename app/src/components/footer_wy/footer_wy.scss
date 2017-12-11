@@ -6,14 +6,16 @@ body{
     position: fixed;
     bottom: 0;
     width: 100%;
+    
     ul{
         display: flex;
         width: 100%;
         li{
             flex: 1;
-            font-size: 20px;
+            font-size: 28px;
             text-align: center;
-            line-height: 40px;
+            height: 60px;
+            line-height: 60px;
         }
         li.active{
             color: #ff6163;
