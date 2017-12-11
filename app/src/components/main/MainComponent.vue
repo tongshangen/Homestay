@@ -131,7 +131,14 @@
 <script type="text/javascript">
 	import './MainComponent.scss'
 
+
 	export default {
+
+		mounted: function () {
+		  var value = sessionStorage.getItem("name");
+		  console.log(value)
+		}
+
 	}
 
 </script>
