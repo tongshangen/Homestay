@@ -99,7 +99,7 @@
 							setTimeout(function(){
 								router.push({name: 'main'});
 							},1000)
-						}else if(re=='no'){
+						}else if(re=='false'){
 							$('.msg').show();
 			                $('.msg')[0].innerHTML=('请输入正确的用户名和密码');
 			                setTimeout(function(){
