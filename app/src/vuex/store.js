@@ -11,6 +11,8 @@ import addnewhouse from '../components/addnewhouse/addnewhouse'
 
 Vue.use(Vuex)
 
+import login from '../components/login/login'
+
 export default new Vuex.Store({
     modules: {
         housedes,
@@ -18,17 +20,7 @@ export default new Vuex.Store({
         houseprice,
         houselocation,
         housefacility,
-        addnewhouse
-    }
-})
-
-import Vue from 'vue';
-import Vuex from 'vuex';
-
-import login from '../components/login/login'
-
-export default new Vuex.Store({
-    modules: {
+        addnewhouse,
         login
     }
 })
