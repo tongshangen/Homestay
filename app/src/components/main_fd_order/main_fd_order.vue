@@ -1,15 +1,15 @@
 <template>
     <div class="main_fd_order">
-        <div id="header">
+        <div class="header">
             <div class="header_order">
                 <h3>订单管理</h3>
             </div>
         </div>
-        <div id="nav">
+        <div class="nav">
             <Nav_wy></Nav_wy>
             <router-view></router-view>
         </div>
-        <div id="main">
+        <div class="main_order">
             <ul>
                 <li>
                     <div class="order_header">

@@ -49,6 +49,7 @@
             echo "连接 MySQL 失败: " . mysqli_connect_error();
             return null;
         }
+        $con->set_charset('utf8');
         return $con;
     }
     

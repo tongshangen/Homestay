@@ -7,10 +7,13 @@ import jquery from 'jquery'
 
 
 
+import store from './vuex/store'
+
 Vue.use(ElementUI)
 
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

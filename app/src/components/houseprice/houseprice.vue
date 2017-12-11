@@ -1,17 +1,17 @@
 <template>
     <div>
-        <div id="header">
+        <div id="header_houseprice">
             <span><i class="el-icon-back" @click="back"></i></span>
             <a @click="save">保存</a>
         </div>
-        <div id="main">
+        <div id="main_houseprice">
             <div class="baseprice">
                 <h3>基础费用</h3>
                 <ul>
                     <li>
                         <h4>每晚价格</h4>
                         <div class="price">
-                            <span>￥</span><input type="text">
+                            <span>￥</span><input type="text" v-model="price">
                         </div>
                     </li>
                 </ul>
@@ -23,11 +23,19 @@
 <script>
     import './houseprice.scss'
     export default {
+        data: function(){
+            return{
+                price:null
+            }
+        },
         methods: {
             back: function(){
                 history.back();
             },
-            save: function(){}
+            save: function(){
+                this.$store.state.houseprice.price = this.price;
+                this.$router.push({name:'edithouse'});
+            }
         }
     }
 </script>

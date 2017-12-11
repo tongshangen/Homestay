@@ -1,12 +1,23 @@
 <template>
     <div>
-        <div id="header">
-            <i class="el-icon-back"></i>
+        <div id="header_edithouse">
+            <i class="el-icon-back" @click="back"></i>
             <span>编辑房源</span>
             <a>预览</a>
         </div>
-        <div id="main">
-            <div class="pic"></div>
+        <div id="main_edithouse">
+            <div class="pic">
+                <el-upload
+                    action="https://jsonplaceholder.typicode.com/posts/"
+                    list-type="picture-card"
+                    :on-preview="handlePictureCardPreview"
+                    :on-remove="handleRemove">
+                    <i class="el-icon-plus"></i>
+                </el-upload>
+                <el-dialog :visible.sync="dialogVisible" size="tiny">
+                    <img width="100%" :src="dialogImageUrl" alt="">
+                </el-dialog>
+            </div>
             <ul>
                 <li @click="housedescribe">
                     <div class="left">
@@ -82,15 +93,33 @@
                         <i class="el-icon-arrow-right"></i>
                     </div>
                 </li>
-            </ul>      
+            </ul>
+            <div class="edit">
+                <input type="button" value="删除房源">
+            </div>
+        </div>
+        <div id="footer_edithouse">
+            <p @click="addhouse">发布房源</p>
         </div>
     </div>
 </template>
 
 <script>
     import './edithouse.scss'
+    import axios from 'axios'
+    import qs from 'qs'
+
     export default {
+        data: function(){
+            return {
+                dialogImageUrl: '',
+                dialogVisible: false
+            }
+        },
         methods: {
+            back: function(){
+                history.back();
+            },
             housedescribe: function(){
                 this.$router.push({name:'housedescribe'});
             },
@@ -102,7 +131,41 @@
             },
             housefacility: function(){
                 this.$router.push({name:'housefacility'});
+            },
+            addhouse: function(){
+                axios({
+                    url: 'http://localhost:1133/room_wy_insert.php',
+                    method: 'post',
+                    data: qs.stringify({
+                        room_name: this.$store.state.housedes.title,room_position:this.$store.state.houselocation.city,nearby:this.$store.state.houselocation.near,room_size:this.$store.state.houseinfo.area,room_type:this.$store.state.addnewhouse.spacetype,max_people:this.$store.state.houseinfo.peoplenum,price:this.$store.state.houseprice.price,
+                        device:this.$store.state.housefacility.desdata,
+                        bed:this.$store.state.houseinfo.bednum,
+                        wc:this.$store.state.houseinfo.wcnum
+                    }),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;'
+                    }
+                }).then(res => {
+                    if(res.data == 'ok'){
+                        this.$router.push({name:'main_wy'});
+                    }else{
+                        alert('添加房源信息有误！');
+                    }
+                    
+                })
+            },
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
+            },
+            handlePictureCardPreview(file) {
+                this.dialogImageUrl = file.url;
+                this.dialogVisible = true;
             }
+        },
+        mounted: function(){
+            // this.title = localStorage.getItem('title');
+            // console.log(this);
+            // console.log(this.$store.state.housedes,this.$store.state.houseinfo,this.$store.state.houselocation,this.$store.state.houseprice,this.$store.state.housefacility);
         }
     }
 </script>
