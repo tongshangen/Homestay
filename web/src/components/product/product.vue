@@ -1,10 +1,5 @@
 <template>
-<<<<<<< HEAD:app/src/components/register/register.vue
-	<div>
-		<h3>注册</h3>
-	</div>
-=======
-	<el-table  style="width: 100%;">
+            <el-table  style="width: 100%;">
             <el-table-column type="selection" width="55">
             </el-table-column>
             <el-table-column type="index" width="60">
@@ -26,12 +21,24 @@
                 </template>
             </el-table-column>
         </el-table>
->>>>>>> master:web/src/components/good/good.vue
+	  
 </template>
 
 
 <script>
-	export default{
+	import datagrid from '../datagrid/datagrid.vue'
 
-	}
+    export default {
+        data: function(){
+            return {
+                filterColumns: []
+            }
+        },
+        components: {
+            datagrid
+        }
+    }
 </script>
+<style type="text/css">
+    
+</style>
