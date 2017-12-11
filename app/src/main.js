@@ -8,6 +8,7 @@ import jquery from 'jquery'
 
 
 import store from './vuex/store'
+import store_wy from './vuex/store'
 
 Vue.use(ElementUI)
 Vue.use(Vuex)
