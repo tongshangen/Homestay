@@ -1,12 +1,22 @@
 <template>
+<<<<<<< HEAD
 	<el-table  style="width: 100%;">
+=======
+            <el-table  style="width: 100%;">
+>>>>>>> af4b2526efd00a6fb987bd77ab3766aa29b2471d
             <el-table-column type="selection" width="55">
             </el-table-column>
             <el-table-column type="index" width="60">
             </el-table-column>
+<<<<<<< HEAD
             <el-table-column label="姓名" width="120" sortable>
             </el-table-column>
             <el-table-column label="性别" width="100"  sortable>
+=======
+            <el-table-column  label="姓名" width="120" sortable>
+            </el-table-column>
+            <el-table-column  label="性别" width="100"  sortable>
+>>>>>>> af4b2526efd00a6fb987bd77ab3766aa29b2471d
             </el-table-column>
             <el-table-column  label="年龄" width="100" sortable>
             </el-table-column>
@@ -21,7 +31,12 @@
                 </template>
             </el-table-column>
         </el-table>
+<<<<<<< HEAD
+=======
+	  
+>>>>>>> af4b2526efd00a6fb987bd77ab3766aa29b2471d
 </template>
+
 
 <script>
 	import datagrid from '../datagrid/datagrid.vue'
@@ -37,3 +52,6 @@
         }
     }
 </script>
+<style type="text/css">
+    
+</style>
