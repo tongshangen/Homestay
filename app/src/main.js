@@ -7,12 +7,8 @@ import Vuex from 'vuex'
 import jquery from 'jquery'
 
 
-<<<<<<< HEAD
-
 import store from './vuex/store'
 
-=======
->>>>>>> 30ed9d73cef3716df630c1fae16e3e49fe9fb37b
 Vue.use(ElementUI)
 Vue.use(Vuex)
 
@@ -25,6 +21,6 @@ var store = new Vuex.Store({
 new Vue({
   el: '#app',
   router,
-  store,
+  store_wy,
   render: h => h(App)
 })

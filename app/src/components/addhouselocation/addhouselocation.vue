@@ -27,9 +27,9 @@
                 history.back();
             },
             next: function(){
-                this.$store.state.houselocation.city = this.city;
-                this.$store.state.houselocation.near = this.near;
-                this.$router.push({name:'edithouse'});
+                this.$store_wy.state.houselocation.city = this.city;
+                this.$store_wy.state.houselocation.near = this.near;
+                this.$router_wy.push({name:'edithouse'});
             }
         }
     }

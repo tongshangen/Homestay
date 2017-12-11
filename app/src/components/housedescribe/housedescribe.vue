@@ -57,11 +57,11 @@
                 history.back();
             },
             save: function(){
-                this.$store.state.housedes.title = this.title;
-                this.$store.state.housedes.special = this.special;
-                this.$store.state.housedes.cont = this.cont;
+                this.$store_wy.state.housedes.title = this.title;
+                this.$store_wy.state.housedes.special = this.special;
+                this.$store_wy.state.housedes.cont = this.cont;
                 // localStorage.setItem('title' , this.title);
-                this.$store.dispatch('increment');
+                this.$store_wy.dispatch('increment');
                 this.$router.push({name:'edithouse'});
             }
         }

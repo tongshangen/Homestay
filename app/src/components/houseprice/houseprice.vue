@@ -33,7 +33,7 @@
                 history.back();
             },
             save: function(){
-                this.$store.state.houseprice.price = this.price;
+                this.$store_wy.state.houseprice.price = this.price;
                 this.$router.push({name:'edithouse'});
             }
         }

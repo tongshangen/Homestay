@@ -167,7 +167,7 @@
             },
             open: function(){
                 if(this.space !='' && this.house != ''){
-                    this.$store.state.addnewhouse.spacetype = this.space;
+                    this.$store_wy.state.addnewhouse.spacetype = this.space;
                     this.$router.push({name:'addhouselocation'});
                     // console.log(this.space,this.house);
                 }else{

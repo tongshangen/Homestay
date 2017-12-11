@@ -142,7 +142,7 @@
                 history.back();
             },
             save: function(){
-                this.$store.state.housefacility.desdata = this.selectdata;
+                this.$store_wy.state.housefacility.desdata = this.selectdata;
                 this.$router.push({name:'edithouse'});
             }
         },

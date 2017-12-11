@@ -89,14 +89,14 @@
                 history.back();
             },
             save: function(){
-                this.$store.state.houseinfo.hx = this.hx;
-                this.$store.state.houseinfo.area = this.area;
-                this.$store.state.houseinfo.peoplenum = this.peoplenum;
-                this.$store.state.houseinfo.wcnum = this.wcnum;
-                this.$store.state.houseinfo.bednum = this.bednum;
-                this.$store.state.houseinfo.staytime = this.staytime; 
-                this.$store.state.houseinfo.leavetime = this.leavetime;   
-                this.$store.dispatch('increment');
+                this.$store_wy.state.houseinfo.hx = this.hx;
+                this.$store_wy.state.houseinfo.area = this.area;
+                this.$store_wy.state.houseinfo.peoplenum = this.peoplenum;
+                this.$store_wy.state.houseinfo.wcnum = this.wcnum;
+                this.$store_wy.state.houseinfo.bednum = this.bednum;
+                this.$store_wy.state.houseinfo.staytime = this.staytime; 
+                this.$store_wy.state.houseinfo.leavetime = this.leavetime;   
+                this.$store_wy.dispatch('increment');
                 this.$router.push({name:'edithouse'});
             },
             reducepeople: function(){

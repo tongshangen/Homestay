@@ -137,10 +137,10 @@
                     url: 'http://localhost:1133/room_wy_insert.php',
                     method: 'post',
                     data: qs.stringify({
-                        room_name: this.$store.state.housedes.title,room_position:this.$store.state.houselocation.city,nearby:this.$store.state.houselocation.near,room_size:this.$store.state.houseinfo.area,room_type:this.$store.state.addnewhouse.spacetype,max_people:this.$store.state.houseinfo.peoplenum,price:this.$store.state.houseprice.price,
-                        device:this.$store.state.housefacility.desdata,
-                        bed:this.$store.state.houseinfo.bednum,
-                        wc:this.$store.state.houseinfo.wcnum
+                        room_name: this.$store_wy.state.housedes.title,room_position:this.$store_wy.state.houselocation.city,nearby:this.$store_wy.state.houselocation.near,room_size:this.$store_wy.state.houseinfo.area,room_type:this.$store_wy.state.addnewhouse.spacetype,max_people:this.$store_wy.state.houseinfo.peoplenum,price:this.$store_wy.state.houseprice.price,
+                        device:this.$store_wy.state.housefacility.desdata,
+                        bed:this.$store_wy.state.houseinfo.bednum,
+                        wc:this.$store_wy.state.houseinfo.wcnum
                     }),
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded;'
