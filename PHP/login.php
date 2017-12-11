@@ -4,10 +4,12 @@
 
     include "connect.php";  
 
-    $username = isset($_GET["username"]) ? $_GET["username"] : '';
+    $user_tel = isset($_GET["user_tel"]) ? $_GET["user_tel"] : '';
     $password = isset($_GET["password"]) ? $_GET["password"] : '';
 
-    $sql = "select * from user where username='$username' and password='$password'";
+    // echo $user_tel;
+
+    $sql = "select * from user where user_tel='$user_tel' and password='$password'";
 
     $result = $conn->query($sql);
 

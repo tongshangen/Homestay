@@ -4,32 +4,33 @@
 
     include "connect.php";  
     
-    $username = isset($_GET["username"]) ? $_GET["username"] : '';
+    $user_tel = isset($_GET["user_tel"]) ? $_GET["user_tel"] : '';
     $password = isset($_GET["password"]) ? $_GET["password"] : '';
     $nickname = isset($_GET["nickname"]) ? $_GET["nickname"] : '';
-
-    // echo $username;
+    
     // $arrdata = json_decode($data);
     
 
-    if($username != "" && $password == ""){
-        $msql = "select * from user where username = '$username'";
+    if($user_tel != "" && $password == ""){
+        $msql = "select * from user where user_tel='$user_tel'";
 
-        $result = $conn->query($msql);
+        $res = $conn->query($msql);
+        $row = $res->fetch_all(MYSQLI_ASSOC);
 
-        $row = $result->fetch_all(MYSQLI_ASSOC);
+
         if(count($row)>0){
-            echo "true";
-        } else {
             echo "false";
+        } else {
+            echo "true";
         };
-    } else if($username != "" && $password != ""){
-        $sql="insert into user(username,password,nickname)values('$username','$password','$nickname')";
+    } else if($user_tel != "" && $password != ""){
+        $sql="insert into user(user_tel,password,balance,order_number,role,nickname)values('$user_tel','$password','0','0','0','$nickname')";
         $resu=$conn->query($sql);
         if($resu){
             echo "ok";
         }else{
             echo "no";
+            // echo $conn->error;
         };
     };
 

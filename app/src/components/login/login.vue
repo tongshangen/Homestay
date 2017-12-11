@@ -90,7 +90,7 @@
 				$.ajax({
 					url: 'http://localhost:999/PHP/login.php',
 					type: 'get',
-					data: {username: this.username, password: this.password},
+					data: {user_tel: this.username, password: this.password},
 					success:function(re){
 						console.log(re)
 						if(re=='true'){

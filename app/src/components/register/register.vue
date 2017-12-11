@@ -78,14 +78,15 @@
 	                $('#username').val('');
 	                return false; 
 		        } else {
+
 		        	$.ajax({
 						url: 'http://localhost:999/PHP/reg.php',
 						type: 'get',
-						data: {username: this.username},
+						data: {user_tel: this.username},
 						success:function(res){
 							// res=JSON.parse(res);
 							console.log(res);
-							if(res == 'true'){
+							if(res == 'false'){
 								$('.msg').show();
 				                $('.msg')[0].innerHTML=('此号码已存在');
 				                setTimeout(function(){
@@ -94,7 +95,7 @@
 				                $('#username').focus();
 				                $('#username').val('');
 				                return false; 
-							} else if(res == 'false'){
+							} else if(res == 'true'){
 								$('.check1').show();	
 							}
 						}
@@ -167,6 +168,7 @@
 		        	$('.check4').show();
 		        }
 		    },
+		    //注册
 			register: function(){	
 				if(!$('#username').val()){
 		            $('.msg').show();
@@ -181,7 +183,7 @@
 				$.ajax({
 					url: 'http://localhost:999/PHP/reg.php',
 					type: 'get',
-					data: {username: this.username, password: this.password, nickname: this.nickname},
+					data: {user_tel: this.username, password: this.password, nickname: this.nickname},
 					success:function(re){
 						console.log(re)
 						if(re=='ok'){
