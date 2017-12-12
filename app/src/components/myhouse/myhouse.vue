@@ -9,8 +9,10 @@
                     <p>{{value.room_position}}</p>
                     <p>{{value.room_type}}<span><i>￥</i>{{value.price}}</span></p>
                 </div>
-                <div class="order_main_r">
-                    <img src="" alt="">
+                <div class="order_main_r"> 
+                    <!-- value.img_url.slice(2,-2) -->
+                    <!-- ../../assets/housing1.jpg -->
+                    <img :src="url" alt="">
                 </div>
             </div>
             <div class="order_footer"></div>
@@ -28,7 +30,8 @@
     export default {
         data: function(){
             return {
-                myhouse:[]
+                myhouse:[],
+                url:''
             }
         },
         methods:{
@@ -99,7 +102,7 @@
                         'Content-Type': 'application/x-www-form-urlencoded;'
                     }
                 }).then(res => {
-                    this.myhouse = res.data;
+                    this.myhouse = res.data;                   
                 })
             })
             
