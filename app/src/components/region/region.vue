@@ -27,12 +27,12 @@
             position: function (eve) {
                 
                 var el = eve.currentTarget.innerHTML;
-                console.log(el);
+                // console.log(el);
                 this.$router.push({name: 'list',query: {room_position: el}});
             }
         },
         mounted(){
-            console.log(this.$route.query.reg)
+            // console.log(this.$route.query.reg)
             var rut= this.$route.query.reg;
             axios({
                 url: 'http://localhost:3004/distination.php',
@@ -52,7 +52,7 @@
                             
                                 if(aa.regions){
                                     aa.regions.forEach(bb=>{
-                                        console.log(bb.name)
+                                        // console.log(bb.name)
                                         this.arr.push(bb.name);
                                     })
                                 }
@@ -66,7 +66,7 @@
                                 if(aa.name == rut){
                                     if(aa.regions){
                                         aa.regions.forEach(bb=>{
-                                            console.log(bb.name)
+                                            // console.log(bb.name)
                                             this.arr.push(bb.name);
                                         })
                                     }
