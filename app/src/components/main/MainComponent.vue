@@ -153,7 +153,6 @@
 	import qs from 'qs'
 	import slider from 'vue-concise-slider'
 
-
 	export default {
 		 data () {
 			return {
@@ -317,11 +316,6 @@
 			onInit (data) {
 				// console.log(data)
 			}
-		},
-
-		mounted: function () {
-		  var value = sessionStorage.getItem("name");
-		  console.log(value)
 		}
 	}
 
