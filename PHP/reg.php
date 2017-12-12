@@ -29,8 +29,8 @@
         if($resu){
             echo "ok";
         }else{
-            // echo "no";
-            echo $conn->error;
+            echo "no";
+            // echo $conn->error;
         };
     };
 

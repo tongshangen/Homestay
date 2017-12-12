@@ -1,6 +1,10 @@
 <template>
 	<div class="Main">		
 		<div class="main">
+			<div class="sherch">
+				<i class="el-icon-search"></i>
+				<input type="text" id="sherch" placeholder="搜索想去的目的地、景点" @click="sherch">
+			</div>
 			<header>
 				<div class="banner">
 					<!-- <img src="../../assets/banner1.jpg"> -->
@@ -12,10 +16,6 @@
 						<!-- <div slot="loading">loading...</div> -->
 
 					</slider>
-				</div>
-				<div class="sherch">
-					<i class="el-icon-search"></i>
-					<input type="text" id="sherch" placeholder="搜索想去的目的地、景点" @click="sherch">
 				</div>
 			</header>
 			<div class="hot_city">
@@ -152,6 +152,7 @@
 	import  axios from 'axios';
 	import qs from 'qs'
 	import slider from 'vue-concise-slider'
+	import $ from 'jquery'
 
 	export default {
 		 data () {
@@ -315,6 +316,24 @@
 			},
 			onInit (data) {
 				// console.log(data)
+			}
+		},
+		mounted: function () {
+			$('.main')[0].onscroll=function(){
+				if($(this).scrollTop()>500){
+					// console.log(66)
+					$('.sherch').css({
+						top: '-30px',
+						background: '#fff',
+						opacity: '1'
+					})
+				}else if($(this).scrollTop()<=500){
+					$('.sherch').css({
+						top: '0px',
+						background: '',
+						opacity: '0.6'
+					})
+				}
 			}
 		}
 	}

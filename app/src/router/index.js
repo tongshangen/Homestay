@@ -10,6 +10,8 @@ import RegionComponent from '../components/region/region.vue';
 import FiltrateComponent from '../components/filtrate/filtrate.vue';
 import SortComponent from '../components/sort/sort.vue';
 import DestinationComponent from '../components/destination/destination.vue';
+import LoginComponent from '../components/login/login.vue';
+import RegisterComponent from '../components/register/register.vue';
 
 Vue.use(VueRouter);
 
@@ -61,6 +63,16 @@ var router = new VueRouter({
             path: '/destination',
             name: 'destination',
             component: DestinationComponent
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: RegisterComponent,
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: LoginComponent,
         }
     ]
 })
