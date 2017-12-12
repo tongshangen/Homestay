@@ -89,14 +89,18 @@
                 history.back();
             },
             save: function(){
-                this.$store_wy.state.houseinfo.hx = this.hx;
-                this.$store_wy.state.houseinfo.area = this.area;
-                this.$store_wy.state.houseinfo.peoplenum = this.peoplenum;
-                this.$store_wy.state.houseinfo.wcnum = this.wcnum;
-                this.$store_wy.state.houseinfo.bednum = this.bednum;
-                this.$store_wy.state.houseinfo.staytime = this.staytime; 
-                this.$store_wy.state.houseinfo.leavetime = this.leavetime;   
-                this.$store_wy.dispatch('increment');
+                this.$store.state.houseinfo.hx = this.hx;
+                this.$store.state.houseinfo.area = this.area;
+                localStorage.setItem('area',this.area);
+                this.$store.state.houseinfo.peoplenum = this.peoplenum;
+                localStorage.setItem('peoplenum',this.peoplenum);
+                this.$store.state.houseinfo.wcnum = this.wcnum;
+                localStorage.setItem('wc',this.wcnum);
+                localStorage.setItem('bed',this.bednum);
+                this.$store.state.houseinfo.bednum = this.bednum;
+                this.$store.state.houseinfo.staytime = this.staytime; 
+                this.$store.state.houseinfo.leavetime = this.leavetime;   
+                this.$store.dispatch('increment');
                 this.$router.push({name:'edithouse'});
             },
             reducepeople: function(){
@@ -139,6 +143,12 @@
             addbed:function(){
                 this.bednum++;
             }
+        },
+        mounted: function(){
+            this.area = localStorage.getItem('area');
+            this.peoplenum = localStorage.getItem('peoplenum');
+            this.wcnum = localStorage.getItem('wc');
+            this.bednum = localStorage.getItem('bed');
         }
     }
 </script>

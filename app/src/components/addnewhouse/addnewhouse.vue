@@ -166,10 +166,11 @@
                 history.back();
             },
             open: function(){
+                console.log(this);
                 if(this.space !='' && this.house != ''){
-                    this.$store_wy.state.addnewhouse.spacetype = this.space;
+                    this.$store.state.addnewhouse.spacetype = this.space;
+                    localStorage.setItem('spacetype',this.space);
                     this.$router.push({name:'addhouselocation'});
-                    // console.log(this.space,this.house);
                 }else{
                     this.$alert('请完善信息', '', {
                         confirmButtonText: '确定'

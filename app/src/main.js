@@ -8,20 +8,15 @@ import jquery from 'jquery'
 
 
 import store from './vuex/store'
-import store_wy from './vuex/store'
+// import store_wy from './vuex/store'
 
 Vue.use(ElementUI)
 Vue.use(Vuex)
 
-var store = new Vuex.Store({
- state: {
-    user_tel: ''
- }
-})
 
 new Vue({
   el: '#app',
   router,
-  store_wy,
+  store,
   render: h => h(App)
 })

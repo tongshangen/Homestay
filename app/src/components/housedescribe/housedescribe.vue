@@ -57,13 +57,16 @@
                 history.back();
             },
             save: function(){
-                this.$store_wy.state.housedes.title = this.title;
-                this.$store_wy.state.housedes.special = this.special;
-                this.$store_wy.state.housedes.cont = this.cont;
+                this.$store.state.housedes.title = this.title;
+                this.$store.state.housedes.special = this.special;
+                this.$store.state.housedes.cont = this.cont;
                 // localStorage.setItem('title' , this.title);
-                this.$store_wy.dispatch('increment');
+                this.$store.dispatch('increment');
                 this.$router.push({name:'edithouse'});
             }
+        },
+        mounted: function(){
+            this.title = localStorage.getItem('title');
         }
     }
 </script>

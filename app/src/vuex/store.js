@@ -8,10 +8,11 @@ import houseprice from '../components/houseprice/houseprice'
 import houselocation from '../components/addhouselocation/addhouselocation'
 import housefacility from '../components/housefacility/housefacility'
 import addnewhouse from '../components/addnewhouse/addnewhouse'
+// import login from '../components/login/login'
 
 Vue.use(Vuex)
 
-import login from '../components/login/login'
+
 
 export default new Vuex.Store({
     modules: {
@@ -20,7 +21,6 @@ export default new Vuex.Store({
         houseprice,
         houselocation,
         housefacility,
-        addnewhouse,
-        login
+        addnewhouse
     }
 })

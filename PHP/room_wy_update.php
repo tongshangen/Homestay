@@ -10,13 +10,12 @@ header('Access-Control-Allow-Origin:*');
     $room_type = isset($_POST["room_type"]) ? $_POST["room_type"] : '';
     $max_people = isset($_POST["max_people"]) ? $_POST["max_people"] : '';
     $price = isset($_POST["price"]) ? $_POST["price"] : '';
-    $device = isset($_POST["device"]) ? $_POST["device"] : '';
-    $device = implode(',',$device);//数组转字符串
+    $device = isset($_POST["device"]) ? $_POST["device"] : [];
+    // $device = implode(',',$device);//数组转字符串
     $bed = isset($_POST["bed"]) ? $_POST["bed"] : '';
     $wc = isset($_POST["wc"]) ? $_POST["wc"] : '';
-    $user_id = isset($_POST["user_id"]) ? $_POST["user_id"] : '';
 
-    $sql = "insert into room(room_name,room_position,nearby,room_size,room_type,max_people,price,device,bed,wc,user_id) values('$room_name','$room_position','$nearby','$room_size','$room_type',$max_people,$price,'$device',$bed,$wc,$user_id)";
+    $sql = "update room set room_position = '$room_position',nearby = '$nearby',room_size = '$room_size',room_type = '$room_type',max_people = $max_people,price = $price,device = '$device',bed = $bed,wc = $wc where room_name = '$room_name'";
 
     $result = excute($sql);
 
