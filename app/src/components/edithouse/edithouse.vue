@@ -197,7 +197,24 @@
                 
             },
             delhouse:function(){
-
+                axios({
+                    url: 'http://localhost:1133/room_wy_del.php',
+                    method: 'post',
+                    data: qs.stringify({
+                        room_name: this.$store.state.housedes.title
+                    }),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;'
+                    }
+                }).then(res => {
+                    // console.log(res);
+                    if(res.data == 'ok'){
+                        this.$router.push({name:'main_wy'});
+                    }else{
+                        alert('删除房源信息有误！');
+                    }
+                    
+                })
             },
             handleRemove(file, fileList) {
                 // console.log(file, fileList);
