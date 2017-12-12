@@ -63,6 +63,9 @@
                     this.my_wy = 'active';
                 }
             }
+        },
+        mounted: function(){
+            
         }
     }
 </script>
