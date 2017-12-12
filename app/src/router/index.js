@@ -12,6 +12,7 @@ import ListComponent from '../components/houselist/list.vue';
 import RegionComponent from '../components/region/region.vue';
 import FiltrateComponent from '../components/filtrate/filtrate.vue';
 import SortComponent from '../components/sort/sort.vue';
+import DestinationComponent from '../components/destination/destination.vue';
 
 
 Vue.use(VueRouter);
@@ -53,8 +54,7 @@ var router = new VueRouter({
                     name: 'sort',
                     component: SortComponent 
                 }
-            ]
-           
+            ] 
         },
         {
             path: '/housedetails',
@@ -62,6 +62,7 @@ var router = new VueRouter({
             component: HousedetailsComponent
         },
         {
+<<<<<<< HEAD
             path: '/register',
             name: 'register',
             component: RegisterComponent,
@@ -70,6 +71,11 @@ var router = new VueRouter({
             path: '/login',
             name: 'login',
             component: LoginComponent,
+=======
+            path: '/destination',
+            name: 'destination',
+            component: DestinationComponent
+>>>>>>> cts
         }
     ]
 })

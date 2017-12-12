@@ -13,21 +13,22 @@
 			<div class="hot_city">
 				<h2>- 热门城市 -</h2>
 				<ul>
-					<li id="city">
+					<li id="city"><router-link to="/houselist/list">
 						<img src="../../assets/hot_city1.png">
-						<p>京都</p>
+						<p>丽江</p>
+						</router-link>
 					</li>
 					<li>
 						<img src="../../assets/hot_city2.png">
-						<p>大阪</p>
+						<p>云南大理</p>
 					</li>
 					<li>
 						<img src="../../assets/hot_city3.png">
-						<p>台北</p>
+						<p>三亚</p>
 					</li>
 					<li>
 						<img src="../../assets/hot_city4.png">
-						<p>洛杉矶</p>
+						<p>香港</p>
 					</li>
 				</ul>
 			</div>
@@ -136,7 +137,8 @@
 	export default {
 		methods:{
 			sherch:function(){
-				console.log(666);
+				// console.log(666);
+				this.$router.push({name: 'destination'});
 			}
 		}
 	}
