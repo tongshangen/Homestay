@@ -17,6 +17,7 @@ import HouseinfoComponent from '../components/houseinfo/houseinfo.vue'
 import HousepriceComponent from '../components/houseprice/houseprice.vue'
 import HousefacilityComponent from '../components/housefacility/housefacility.vue'
 import MyhouseComponent from '../components/myhouse/myhouse.vue'
+import MyorderComponent from '../components/myorder/myorder.vue'
 
 Vue.use(VueRouter);
 
@@ -96,6 +97,11 @@ var router = new VueRouter({
             path:'/myhouse',
             name: 'myhouse',
             component:MyhouseComponent
+        },
+        {
+            path:'/myorder',
+            name: 'myorder',
+            component:MyorderComponent
         }
         
     ]

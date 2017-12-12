@@ -10,9 +10,9 @@
                     <p>{{value.room_type}}<span><i>￥</i>{{value.price}}</span></p>
                 </div>
                 <div class="order_main_r"> 
-                    <!-- value.img_url.slice(2,-2) -->
+                    <!-- {{value.img_url.slice(2,-2)}} -->
                     <!-- ../../assets/housing1.jpg -->
-                    <img :src="url" alt="">
+                    <img src="" alt="">
                 </div>
             </div>
             <div class="order_footer"></div>
@@ -30,8 +30,7 @@
     export default {
         data: function(){
             return {
-                myhouse:[],
-                url:''
+                myhouse:[]
             }
         },
         methods:{
