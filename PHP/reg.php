@@ -24,13 +24,13 @@
             echo "true";
         };
     } else if($user_tel != "" && $password != ""){
-        $sql="insert into user(user_tel,password,balance,order_number,role,nickname)values('$user_tel','$password','0','0','0','$nickname')";
+        $sql="insert into user(user_tel,password,balance,order_id,role,nickname)values('$user_tel','$password','0','0','0','$nickname')";
         $resu=$conn->query($sql);
         if($resu){
             echo "ok";
         }else{
-            echo "no";
-            // echo $conn->error;
+            // echo "no";
+            echo $conn->error;
         };
     };
 
