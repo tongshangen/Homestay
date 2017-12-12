@@ -62,7 +62,6 @@ var router = new VueRouter({
             component: HousedetailsComponent
         },
         {
-<<<<<<< HEAD
             path: '/register',
             name: 'register',
             component: RegisterComponent,
@@ -71,11 +70,9 @@ var router = new VueRouter({
             path: '/login',
             name: 'login',
             component: LoginComponent,
-=======
             path: '/destination',
             name: 'destination',
             component: DestinationComponent
->>>>>>> cts
         }
     ]
 })
