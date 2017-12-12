@@ -3,7 +3,15 @@
 		<div class="main">
 			<header>
 				<div class="banner">
-					<img src="../../assets/banner1.jpg">
+					<!-- <img src="../../assets/banner1.jpg"> -->
+				<!-- </div> -->
+				<!-- <div style="width:100%;height:400px"> -->
+					<!-- 配置slider组件 -->
+					<slider :pages="pages" :sliderinit="sliderinit" @slide='slide' @tap='onTap' @init='onInit'>
+						<!-- 设置loading,可自定义 -->
+						<!-- <div slot="loading">loading...</div> -->
+
+					</slider>
 				</div>
 				<div class="sherch">
 					<i class="el-icon-search"></i>
@@ -13,28 +21,27 @@
 			<div class="hot_city">
 				<h2>- 热门城市 -</h2>
 				<ul>
-					<li id="city"><router-link to="/houselist/list">
+					<li @click="links">
 						<img src="../../assets/hot_city1.png">
-						<p>丽江</p>
-						</router-link>
+						<p>广州</p>
 					</li>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city2.png">
-						<p>云南大理</p>
+						<p>北京</p>
 					</li>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city3.png">
-						<p>三亚</p>
+						<p>海南省</p>
 					</li>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city4.png">
-						<p>香港</p>
+						<p>上海</p>
 					</li>
 				</ul>
 			</div>
 			<div class="like">
 				<h2>- 你可能会喜欢 -</h2>
-				<ul>
+				<!-- <ul>
 					<li>
 						<div class="img"><img src="../../assets/like1.jpg"></div>
 						<div class="mass">
@@ -81,41 +88,52 @@
 						</div>
 						</div>	
 					</li>
-				</ul>
+				</ul> -->
+				<!-- 配置slider组件 -->
+				<slider :pages="pages1" :sliderinit="sliderinit1" @slide='slide' @tap='onTap' @init='onInit'>
+					<!-- 设置loading,可自定义 -->
+					<!-- <div slot="loading">loading...</div> -->
+
+				</slider>
 			</div>
 			<div class="hot_city">
 				<h2>- 玩遍中国 -</h2>
 				<ul>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city5.png">
-						<p>北京</p>
+						<p>台湾</p>
 					</li>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city6.png">
-						<p>上海</p>
+						<p>香港</p>
 					</li>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city7.png">
-						<p>广州</p>
+						<p>云南</p>
 					</li>
-					<li>
+					<li @click="links">
 						<img src="../../assets/hot_city8.png">
-						<p>三亚</p>
+						<p>天津</p>
 					</li>
 				</ul>
 			</div>
 			<div class="fangdong">
 				<h2>- 房东故事 -</h2>
-				<ul>
+				<slider :pages="pages2" :sliderinit="sliderinit2" @slide='slide' @tap='onTap' @init='onInit' class="fd">
+					<!-- 设置loading,可自定义 -->
+					<!-- <div slot="loading">loading...</div> -->
+
+				</slider>
+				<!-- <ul>
 					<li>
-							<img src="../../assets/fangdong1.jpg">
-							<div class="liuyan">他放弃亲手创办的公司跑到深山里花15个月爆改百年老墅,改变了一座山的命运</div>
+						<img src="../../assets/fangdong1.jpg">
+						<div class="liuyan">他放弃亲手创办的公司跑到深山里花15个月爆改百年老墅,改变了一座山的命运</div>
 					</li>
 					<li>
-							<img src="../../assets/fangdong1.jpg">
-							<div class="liuyan">他放弃亲手创办的公司跑到深山里花15个月爆改百年老墅,改变了一座山的命运</div>
+						<img src="../../assets/fangdong1.jpg">
+						<div class="liuyan">他放弃亲手创办的公司跑到深山里花15个月爆改百年老墅,改变了一座山的命运</div>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 		<footer>
@@ -133,12 +151,170 @@
 	import './MainComponent.scss'
 	import  axios from 'axios';
 	import qs from 'qs'
+	import slider from 'vue-concise-slider'
 
 	export default {
+		 data () {
+			return {
+				//Image list
+				pages:[
+				{
+				html: '<div><img src="../src/assets/banner1.jpg"/></div>',
+				},
+				{
+					html: '<div><img src="../src/assets/banner2.jpg"/></div>',
+				},
+				{
+					html: '<div><img src="../src/assets/banner3.jpg"/></div>',
+				}
+				],
+				//Sliding configuration [obj]
+				sliderinit: {
+				currentPage: 0,
+				thresholdDistance: 500,
+				thresholdTime: 1000,
+				autoplay:3000,
+				loop:true,
+				direction:'horizontal',
+				infinite:1,
+				slidesToScroll:1,
+				timingFunction: 'ease',
+				duration: 300
+				},
+				pages1:[
+				{
+				html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+						<div class="mass">
+								<div class="like_left">
+									<h3>京恋清水</h3>
+									<p>整套-7张床-可住7人-京都市</p>
+									<div class="star">
+										<ul>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+										</ul>
+										<p class="pinjia">15人评价</p>
+									</div>
+							</div>	
+						<div class="like_right">
+							<i></i>
+						</div>
+						</div>
+					</div>`,
+				},
+				{
+					html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+						<div class="mass">
+								<div class="like_left">
+									<h3>京恋清水</h3>
+									<p>整套-7张床-可住7人-京都市</p>
+									<div class="star">
+										<ul>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+										</ul>
+										<p class="pinjia">15人评价</p>
+									</div>
+							</div>	
+						<div class="like_right">
+							<i></i>
+						</div>
+						</div>
+					</div>`,
+				},
+				{
+					html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+						<div class="mass">
+								<div class="like_left">
+									<h3>京恋清水</h3>
+									<p>整套-7张床-可住7人-京都市</p>
+									<div class="star">
+										<ul>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+										</ul>
+										<p class="pinjia">15人评价</p>
+									</div>
+							</div>	
+						<div class="like_right">
+							<i></i>
+						</div>
+						</div>
+					</div>`,
+				}
+				],
+				//Sliding configuration [obj]
+				sliderinit1: {
+				currentPage: 0,
+				thresholdDistance: 500,
+				thresholdTime: 1000,
+				// autoplay:3000,
+				loop:true,
+				direction:'horizontal',
+				infinite:1,
+				slidesToScroll:1,
+				timingFunction: 'ease',
+				duration: 300
+				},
+				pages2:[
+				{
+				html: `<img src="../src/assets/fangdong3.jpg">
+						<div class="liuyan">2个月爆改1949年的老房子，陈坤徐若瑄都成这儿的常客</div>`,
+				},
+				{
+					html: `<img src="../src/assets/fangdong2.jpg">
+						<div class="liuyan">20岁开上宾利，90后农村女孩逆袭成为最美民宿老板</div>`,
+				},
+				{
+					html: `<img src="../src/assets/fangdong1.jpg">
+						<div class="liuyan">他放弃亲手创办的公司跑到深山里花15个月爆改百年老墅,改变了一座山的命运</div>`,
+				}
+				],
+				//Sliding configuration [obj]
+				sliderinit2: {
+				currentPage: 0,
+				thresholdDistance: 500,
+				thresholdTime: 1000,
+				// autoplay:3000,
+				loop:true,
+				direction:'horizontal',
+				infinite:1,
+				slidesToScroll:1,
+				timingFunction: 'ease',
+				duration: 300
+				},
+			}
+		},
+		components: {
+			slider
+		},
 		methods:{
 			sherch:function(){
 				// console.log(666);
 				this.$router.push({name: 'destination'});
+			},
+			links:function(eve){
+				var el = eve.currentTarget.getElementsByTagName('p')[0].innerText
+				// console.log(el)
+				this.$router.push({name: 'list',query: {room_position: el}});
+			},
+			slide (data) {
+				// console.log(data)
+			},
+			onTap (data) {
+				// console.log(data)
+			},
+			onInit (data) {
+				// console.log(data)
 			}
 		}
 	}

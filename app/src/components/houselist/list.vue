@@ -117,7 +117,7 @@
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
                 }).then(res => {
-                    console.log(res)
+                    // console.log(res)
                     this.dataset = res.data;
                 });
             }
