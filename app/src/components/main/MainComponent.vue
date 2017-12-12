@@ -134,12 +134,18 @@
 	import  axios from 'axios';
 	import qs from 'qs'
 
+
 	export default {
 		methods:{
 			sherch:function(){
 				// console.log(666);
 				this.$router.push({name: 'destination'});
 			}
+		},
+
+		mounted: function () {
+		  var value = sessionStorage.getItem("name");
+		  console.log(value)
 		}
 	}
 
