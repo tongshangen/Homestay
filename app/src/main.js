@@ -3,10 +3,18 @@ import App from './App.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import router from './router/index'
+import Vuex from 'vuex'
+import jquery from 'jquery'
+
+
+import store from './vuex/store'
+// import store_wy from './vuex/store'
 
 
 Vue.use(ElementUI)
+Vue.use(Vuex)
 
+<<<<<<< HEAD
 
 // 创建高德地图
 let createMap = () => {
@@ -27,6 +35,13 @@ createMap().then(function() {
     console.log('读取高德地图成功')
 }).catch(function(error) {
     console.log('发生错误!', error)
+=======
+new Vue({
+  el: '#app',
+  router,
+  store,
+  render: h => h(App)
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
 })
 new Vue({
     el: '#app',

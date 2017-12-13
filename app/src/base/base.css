@@ -22,6 +22,7 @@ a{
 a:hover{
 	text-decoration:underline;}
 *{
+<<<<<<< HEAD
 	box-sizing:border-box;}
 /*字体图标*/
 @font-face {font-family: "football";
@@ -53,3 +54,6 @@ a:hover{
 
 .icon-camera:before { content: "\e501"; }
 
+=======
+	box-sizing:border-box;}
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf

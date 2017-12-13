@@ -8,7 +8,11 @@
           <el-radio :label="3">合住</el-radio>
         </el-radio-group>
         <h3>房客人数</h3>
+<<<<<<< HEAD
         <el-input-number v-model="max_people" @change="handleChange" :min="1" :max="10" label="描述文字" class="count"></el-input-number>
+=======
+        <el-input-number v-model="max_people" @change="handleChange" :min="0" :max="10" label="描述文字" class="count"></el-input-number>
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
         <h3>价格范围{{value1}}元</h3>
         <div class="block">
           <el-slider v-model="value1" range show-stops  :max="1500"  @change="handleChange"> </el-slider>
@@ -16,17 +20,29 @@
         <h3>房间和床位</h3>
         <div class="rooms">
           <p>卧室</p>
+<<<<<<< HEAD
           <el-input-number v-model="bedroom" @change="handleChange" :min="1" :max="10" label="卧室" class="count bed"></el-input-number>
+=======
+          <el-input-number v-model="bedroom" @change="handleChange" :min="0" :max="10" label="卧室" class="count bed"></el-input-number>
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
         </div>
         
         <div class="rooms">
           <p>床</p>
+<<<<<<< HEAD
           <el-input-number v-model="bed" @change="handleChange" :min="1" :max="10" label="床" class="count bed"></el-input-number>
+=======
+          <el-input-number v-model="bed" @change="handleChange" :min="0" :max="10" label="床" class="count bed"></el-input-number>
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
         </div>
         
         <div class="rooms">
           <p>独立卫生间</p>
+<<<<<<< HEAD
           <el-input-number v-model="wc" @change="handleChange" :min="1" :max="10" label="独立卫生间" class="count bed"></el-input-number>
+=======
+          <el-input-number v-model="wc" @change="handleChange" :min="0" :max="10" label="独立卫生间" class="count bed"></el-input-number>
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
         </div>
           <h3>配套设施</h3>
           <el-checkbox-group  v-model="devList">
@@ -53,6 +69,7 @@
   export default {
     data () {
       return {
+<<<<<<< HEAD
         radio2: 1,
         max_people: 1,
         bedroom: 1,
@@ -61,10 +78,22 @@
         value: '',
         devList: [],
         value1: [0, 1500]
+=======
+        radio2: 0,
+        max_people: 0,
+        bedroom:0,
+        bed: 0,
+        wc: 0,
+        value: '',
+        devList: [],
+        value1: [0, 1500],
+        prop:{}
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
       };
     },
     methods: {
         handleChange(value) {
+<<<<<<< HEAD
           console.log(value);
         },
         confirm:function(){
@@ -73,6 +102,47 @@
         },
         cancel:function(){
           console.log(666)
+=======
+          // console.log(value);
+        },
+        confirm:function(){
+          console.log(this.radio2)
+          if(this.radio2 !=0){
+            this.prop['room_type']= this.radio2;
+          }
+          if(this.max_people !=0){
+            this.prop['max_people'] = this.max_people;
+          }
+          if(this.bedroom !=0){
+            this.prop['bedroom']= this.bedroom;
+          }
+          if(this.bed !=0){
+            this.prop['bed']=this.bed;
+          }
+          if(this.wc !=0){
+            this.prop['wc']=this.wc;
+          }
+          if(this.devList !=0){
+            this.prop['device']=this.devList;
+          }
+
+          this.prop['price1'] = this.value1[0];
+          this.prop['price2'] = this.value1[1];
+          // console.log(this.prop)
+          // this.$router.push({name: 'list',query: {room_type: this.radio2,max_people: this.max_people,bedroom:this.bedroom,bed:this.bed,wc:this.wc,device:this.devList}});
+          this.$router.push({name: 'list',query:this.prop});
+        },
+        cancel:function(){
+            this.radio2=0,
+            this.max_people= 0,
+            this.bedroom=0,
+            this.bed=0,
+            this.wc=0,
+            this.value='',
+            this.devList= [],
+            this.value1=[0, 1500],
+            this.prop={}
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
         }
     },
     mounted:function(){

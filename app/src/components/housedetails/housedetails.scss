@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // html,
 // body {
 //     width: 100%;
@@ -25,10 +26,37 @@
             top: 20px;
         }
         h3 {
+=======
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#app,.Main{
+	width: 100%;
+	height: 100%;
+}
+.Main{
+	height: 100%;
+    display:flex;
+	flex-direction:column;
+}
+.top{
+    height:80px;
+    header{
+        height: 80px;
+        position: relative;
+        i{
+            position: absolute;
+            left: 10px;
+            top:20px;
+        }
+        h3{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
             // height: 156px;
             text-align: center;
             padding-top: 20px;
         }
+<<<<<<< HEAD
         >ul {
             position: absolute;
             right: 20px;
@@ -37,11 +65,20 @@
             li {
                 flex: 1;
                 flex-direction: column;
+=======
+        >ul{
+           position: absolute;right: 20px;top:10px;
+           display: flex;
+            li{
+                flex: 1;
+                flex-direction:column;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                 text-align: center;
                 height: 55px;
                 line-height: 55px;
             }
         }
+<<<<<<< HEAD
         .banner {
             img {
                 width: 100%;
@@ -60,10 +97,25 @@
             position: relative;
             height: 310px;
             img {
+=======
+    }
+}
+
+.main{
+    flex: 1;
+    .bottom{
+       overflow: hidden;
+       height: 3360px;
+       .img{
+            position: relative;
+            height: 310px;
+            img{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                 display: block;
                 height: 310px;
                 width: 100%;
             }
+<<<<<<< HEAD
             span {
                 position: absolute;
             }
@@ -75,10 +127,23 @@
                 background: #000;
                 opacity: 0.5;
                 color: #fff;
+=======
+            span{
+                position: absolute;
+            }
+            .price{
+                left:20px;bottom: 0;
+                width: 150px;
+                height: 80px;
+                background:#000;
+                opacity: 0.5;
+                color:#fff;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                 line-height: 80px;
                 font-size: 30px;
                 text-align: center;
             }
+<<<<<<< HEAD
             >p {
                 width: 100px;
                 right: 0;
@@ -95,10 +160,28 @@
                 line-height: 60px;
             }
             .touxiang {
+=======
+            >p{
+                width: 100px;
+                right: 0;bottom: 0;
+                height: 30px;
+            }
+        }
+        .house_mass{
+            padding: 20px 20px;
+            height: 200px;
+            position: relative;
+            h3{
+                height: 60px;
+                line-height: 60px;
+            }
+            .touxiang{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                 position: absolute;
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
+<<<<<<< HEAD
                 border: 5px solid #fff;
                 left: 20px;
                 top: 100px;
@@ -121,6 +204,27 @@
                 display: flex;
                 border-bottom: 1px solid #cccccc;
                 li {
+=======
+                border:5px solid #fff;
+                left: 20px;
+                top:100px;
+                background:url('../../assets/fangdong1.jpg')
+            }
+            >span{
+                position: absolute;left:150px;top:130px;
+            }
+        }
+        .rent{
+            height: 200px;
+            padding: 30px;
+            h3{
+                height: 60px;line-height: 60px;
+            }
+            ul{
+                display: flex;
+
+                li{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                     flex: 1;
                     height: 112px;
                     text-align: center;
@@ -128,6 +232,7 @@
                 }
             }
         }
+<<<<<<< HEAD
         .account {
             height: 230px;
             padding: 0 20px;
@@ -163,10 +268,45 @@
                         flex: 1;
                         i {
                             color: #F7A621;
+=======
+        .account{
+            height: 230px;
+            padding:0 20px;
+            h3{
+                height: 60px;line-height: 60px;
+            }
+            >p{
+                height: 100px;
+                line-height: 50px;
+                color:#333;
+                padding:0 40px;
+                overflow: hidden;
+            }
+            >span{
+                margin-left:30px;
+                color:#FF4942;
+            }
+        }
+        .appraise{
+            height: 260px;
+            padding:40px 20px;
+            .star{
+                h3{
+                    float: left;margin-right: 20px;
+                }
+                >ul{
+                    li{
+                        float: left;
+                        width: 25px;height: 25px;
+                        flex: 1;
+                        i{
+                           color:#F7A621;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                         }
                     }
                 }
             }
+<<<<<<< HEAD
             .infor {
                 height: 280px;
                 padding: 0 20px;
@@ -178,10 +318,22 @@
                             padding-top: 20px;
                             position: relative;
                             .touxiang {
+=======
+            .infor{
+                height: 280px;
+                ul{
+                    li{
+                        .top{
+                            height: 120px;
+                            padding-top: 20px;
+                            position: relative;
+                            .touxiang{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                                 position: absolute;
                                 width: 100px;
                                 height: 100px;
                                 border-radius: 50%;
+<<<<<<< HEAD
                                 border: 5px solid #fff;
                                 left: 10px;
                                 top: 20px;
@@ -222,10 +374,53 @@
                 .Img {
                     height: 330px;
                     img {
+=======
+                                border:5px solid #fff;
+                                left: 10px;
+                                top:20px;
+                                background:url('../../assets/fangdong1.jpg')
+    
+                            }
+                            h3{
+                                padding-left: 130px;
+                                color:#333;
+                            }
+                            p{
+                                padding-left: 130px;
+                                color:#848A8C;
+                            }
+                        }
+                        .pinglun{
+                            height: 80px;
+                            line-height: 40px;
+                            padding-left: 20px;
+                            margin-top:20px;
+                        }
+                    }
+                }
+                >span{
+                    margin-top:20px;
+                    color:#FF4942;
+                }
+            }
+            .address{
+                h3{
+                    height: 80px;
+                    line-height: 80px;
+                }
+                p{
+                    height: 80px;
+                    line-height: 80px;
+                }
+                .Img{
+                    height: 330px;
+                    img{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                         height: 330px;
                     }
                 }
             }
+<<<<<<< HEAD
             .bed {
                 margin-top: 20px;
                 padding: 0 20px;
@@ -240,12 +435,25 @@
                     display: flex;
                     flex-direction: column;
                     li {
+=======
+            .bed{
+                h3{
+                    margin-top:30px;
+                    height: 80px;
+                    line-height: 80px;
+                }
+                ul{
+                    display: flex;
+	                flex-direction:column;
+                    li{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                         flex: 1;
                         height: 80px;
                         line-height: 80px;
                     }
                 }
             }
+<<<<<<< HEAD
             .check_in {
                 h3 {
                     margin-top: 30px;
@@ -283,10 +491,46 @@
                     li {
                         flex: 1;
                         padding-top: 80px;
+=======
+            .check_in{
+                h3{
+                    margin-top:30px;
+                    height: 80px;
+                    line-height: 80px;
+                }
+                ul{
+                    li{
+                        height: 80px;
+                        line-height: 80px;
+                        color:#333;
+                        span:first-child{
+                            float: left;
+                        }
+                        span:last-child{
+                            float: right;
+                        }
+                    }
+                    
+                }
+            }
+            .facility{
+                h3{
+                    margin-top:30px;
+                    height: 80px;
+                    line-height: 80px;
+                }
+                ul{
+                    height: 150px;
+                    display: flex;
+                    li{
+                        flex: 1;
+                        padding-top:80px;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                         text-align: center;
                     }
                 }
             }
+<<<<<<< HEAD
             .similarity {
                 height: 560px;
                 margin-top: 20px;
@@ -304,10 +548,31 @@
                         .img {
                             width: 540px;
                             img {
+=======
+            .similarity{
+               
+                height: 560px;
+                h3{
+                    height: 44px;
+                    line-height: 44px;
+                }
+                >ul{
+                    padding-top:20px;
+                    display: flex;
+                    >li{
+                        flex: 1;
+                        
+                        width: 540px;
+                        margin-right: 20px;
+                        .img{
+                            width: 540px;
+                            img{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                                 width: 540px;
                                 height: 315px;
                             }
                         }
+<<<<<<< HEAD
                         .mass {
                             display: flex;
                             height: 132px;
@@ -332,19 +597,52 @@
                                                 flex: 1;
                                                 i {
                                                     color: #F7A621;
+=======
+        
+                        .mass{
+                            display: flex;
+                            height: 132px;
+                            .like_left{
+                                flex: 1;
+                                padding-top:15px;
+                                h3{
+                                    height: 45px;
+                                    line-height: 45px;
+                                    color:#333333;
+                                    font-size: 22px;
+                                    >p{
+                                        color:#84868C;
+                                        font-size:16px;
+                                    }
+                                    .star{
+                                        >ul{
+                                            li{
+                                                float: left;
+                                                width: 25px;height: 25px;
+                                                flex: 1;
+                                                i{
+                                                   color:#F7A621;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
+<<<<<<< HEAD
                             .like_right {
                                 width: 196px;
                                 >i {
+=======
+                            .like_right{
+                                width: 196px;
+                                >i{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                                     display: block;
                                     width: 55px;
                                     height: 55px;
                                     border-radius: 50%;
+<<<<<<< HEAD
                                     background: url('../../assets/like1.jpg');
                                     margin: 0 auto;
                                     margin-top: 20px;
@@ -355,6 +653,15 @@
                                     width: 60px;
                                     height: 40px;
                                     // font-size: 30px;
+=======
+                                    background:url('../../assets/like1.jpg');
+                                    margin:0 auto;
+                                    margin-top:20px;
+                                }
+                                >button{
+                                    margin-left:70px;
+                                    border:none;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                                     border: 2px solid #39B2C6;
                                     border-left: 1px solid #39B2C6;
                                     border-right: 1px solid #39B2C6;
@@ -369,6 +676,7 @@
         }
     }
 }
+<<<<<<< HEAD
 
 footer {
     height: 80px;
@@ -387,6 +695,25 @@ footer {
             background: #39B2C6;
         }
         button:last-child {
+=======
+footer{
+    height: 80px;
+    .btn{
+        display: flex;
+        // padding:0 20px;
+        button{
+            flex: 1;
+            width: 50%;
+            height: 80px;
+            border:none;
+            font-size:30px;
+            color:#fff;
+        }
+        button:first-child{
+            background: #39B2C6;
+        }
+        button:last-child{
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
             background: #FF6563;
         }
     }

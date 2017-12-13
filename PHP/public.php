@@ -16,6 +16,10 @@
     }
 
      //设置编码
+<<<<<<< HEAD
 	$conn->set_charset('utf8'); 
 	
+=======
+    $conn->set_charset('utf8'); 
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
 ?>

@@ -1,0 +1,13 @@
+#header{
+    .header{
+        display:flex;
+        width: 100%;
+        h3{
+            flex: 1;
+            text-align: center;
+            line-height: 100px;
+            font-weight: normal;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}

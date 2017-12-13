@@ -2,7 +2,11 @@
     <div class="content">
         <div class="bottom" v-if="dataset.length > 0">
             <ul>
+<<<<<<< HEAD
                 <li @click="getContent(value)" v-for="(value, key) in dataset">
+=======
+                <li v-for="(value, key) in dataset">
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                     <div class="housing">
                         <i class="el-icon-star-on"></i>
                         <img src="../../assets/housing1.jpg">
@@ -65,23 +69,39 @@
                 
             </ul>
         </div>
+<<<<<<< HEAD
+=======
+         <p v-else-if="dataset.length < 1" class="alert">{{alert}}</p>
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
     </div>
 </template>
 
 <script>
+<<<<<<< HEAD
     import '../housedetails/housedetails.scss'
     import axios from 'axios'
     import qs from 'qs'
     
+=======
+    import axios from 'axios';
+    import qs from 'qs'
+    import './houselist.scss';
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
     export default {
         data: function(){
             return {
                 dataset: [],
+<<<<<<< HEAD
                 obj:{}
+=======
+                obj:{},
+                alert:"找不到数据!"
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
             }
         },
         methods:{
             data:function(){
+<<<<<<< HEAD
             },
             // 点击当前的li
             getContent(value) {
@@ -91,6 +111,12 @@
             }
         },
         mounted() {
+=======
+                console.log(666);
+            }
+        },
+        mounted(){
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
             var data = {check_in:this.$route.query.object1,check_out:this.$route.query.object2};
 
             var position= {room_position:this.$route.query.object3};
@@ -106,18 +132,35 @@
             //     this.obj = sort;
             //     return;
             // }
+<<<<<<< HEAD
             console.log(this.$route.query)
             if(this.dataset.length < 1){
                 axios({
                     url: 'http://localhost:8080/houselist.php',
+=======
+            
+            // if(this.$route.query['room_position']){
+            //     this.$emit("tr",this.$route.query['room_position']);
+            //     console.log(this.$route.query['room_position'])
+            // }
+
+            if(this.dataset.length < 1){
+                axios({
+                    url: 'http://localhost:3004/houselist.php',
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                     method: 'post',
                     data: qs.stringify(this.$route.query),
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
                 }).then(res => {
+<<<<<<< HEAD
                     this.dataset = res.data;
                     console.log(res.data)
+=======
+                    // console.log(res)
+                    this.dataset = res.data;
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                 });
             }
         }

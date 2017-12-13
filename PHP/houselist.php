@@ -8,12 +8,25 @@
     $sort = isset($_POST["sort"]) ? $_POST["sort"] : '';
     $room_type = isset($_POST["room_type"]) ? $_POST["room_type"] : '';
     $max_people = isset($_POST["max_people"]) ? $_POST["max_people"] : '';
+<<<<<<< HEAD
     
     
     $sql;
     
     if($check_in != ''|| $check_out != ''){
         $sql = "select * from  room_type,room where check_in>='$check_in' or check_out<='$check_out' and  room_type.room_type = room.room_type;";
+=======
+    $bedroom = isset($_POST["bedroom"]) ? $_POST["bedroom"] : '';
+    $bed = isset($_POST["bed"]) ? $_POST["bed"] : '';
+    $wc = isset($_POST["wc"]) ? $_POST["wc"] : '';
+    $price1 = isset($_POST["price1"]) ? $_POST["price1"] : 0;
+    $price2 = isset($_POST["price2"]) ? $_POST["price2"] : 1500;
+
+    $sql;
+    
+    if($check_in != ''|| $check_out != ''){
+        $sql = "select * from  room_type,room where check_in>='$check_in' or check_out >='$check_out' and  room_type.room_type = room.room_type;";
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
     } else if($room_position !=''){                                 
         $sql = "select * from room_type,room WHERE room_position like '%" .$room_position. "%' and  room_type.room_type = room.room_type;";
     } else if($sort !=''){
@@ -26,8 +39,26 @@
         } else {
             $sql = "select * from room_type,room where  room_type.room_type = room.room_type;";
         }
+<<<<<<< HEAD
     } else if($room_type !=''){
         $sql = "select * from room_type,room WHERE room.room_type = '$room_type' and room.max_people = '$max_people' and  room_type.room_type = room.room_type;";
+=======
+    } else if($room_type !='' || $max_people !='' || $bedroom !='' || $bed !='' || $wc !='' ){
+        if($room_type !='' && $max_people !='' && $bedroom !='' && $bed !='' && $wc !='' ){
+            $sql = "select * from room_type,room WHERE  room.price between '$price1' and '$price2' and room.room_type = '$room_type' and room.max_people >= '$max_people' and room.bedroom >= '$bedroom' and room.bed >= '$bed' and room.wc >= '$wc' and   room_type.room_type = room.room_type ORDER BY  room.room_type;";
+        } else if($room_type !='' && $max_people !='' && $bedroom !='' && $bed !=''){
+            $sql = "select * from room_type,room WHERE  room.price between '$price1' and '$price2' and room.room_type = '$room_type' and room.max_people >= '$max_people' and room.bedroom >= '$bedroom' and room.bed >= '$bed' and  room_type.room_type = room.room_type ORDER BY  room.room_type;";
+        } else if($room_type !='' && $max_people !='' && $bedroom !=''){
+            $sql = "select * from room_type,room WHERE  room.price between '$price1' and '$price2' and room.room_type = '$room_type' and room.max_people >= '$max_people' and room.bedroom >= '$bedroom'  and  room_type.room_type >= room.room_type ORDER BY  room.room_type;";
+        } else if($room_type !='' && $max_people !=''){
+
+            $sql = "select * from room_type,room WHERE  room.price between '$price1' and '$price2' and room.room_type = '$room_type' and  room.max_people >= '$max_people' and  room_type.room_type >= room.room_type ORDER BY  room.room_type;";
+
+        } else if($room_type !=''){
+            $sql = "select * from room_type,room WHERE room.price between '$price1' and '$price2' and room.room_type = '$room_type' and  room_type.room_type = room.room_type ORDER BY  room.room_type";
+        }
+       
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
     } else {
         $sql = "select * from room_type,room where  room_type.room_type = room.room_type;";
     }

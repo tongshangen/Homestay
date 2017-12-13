@@ -21,7 +21,11 @@
         methods:{
             sort: function (eve) {
                 var el = eve.currentTarget.id;
+<<<<<<< HEAD
                 console.log(el);
+=======
+                // console.log(el);
+>>>>>>> 78a2fd3e8df69978375b9ff49437999c68691dcf
                 this.$router.push({name: 'list',query: {sort: el}});
             }
         }
