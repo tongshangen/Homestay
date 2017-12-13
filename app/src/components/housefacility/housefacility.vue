@@ -149,6 +149,7 @@
         },
         mounted: function(){
             // this.selectdata = localStorage.getItem('dev');
+            // console.log(this.selectdata.split(','));
         }
     }
 </script>
