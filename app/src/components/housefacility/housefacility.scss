@@ -1,0 +1,49 @@
+html,body{
+    position: relative;
+}
+#header_fac{
+    font-size: 36px;
+    padding: 10px;
+    height: 86px;
+    line-height: 86px;
+    position: fixed;
+    top:0;
+    background: #fff;
+    width: 100%;
+    span{
+        margin-left: 0;
+    }
+    a{
+        float: right;
+        color: #ff6163;
+        margin-right: 10px;
+    }
+}
+#main_housefac{
+    .active{
+        background: #3DB1BE;
+    }
+    margin-top: 100px;
+    h3{
+        font-size: 36px;
+        font-weight: normal;
+        margin: 0px 0 16px 20px;
+    }
+    ul{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        li{
+            font-size: 30px;
+            height: 60px;
+            line-height: 50px;
+            flex: 24%;
+            display: inline-block;
+            border:0 none;
+            // padding: 18px;
+            margin: 2%;
+            background: #eee;
+            text-align: center;
+        }
+    }
+}
