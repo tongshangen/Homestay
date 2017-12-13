@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 	//用于取出所有的房源信息
 	header('Access-Control-Allow-Origin:*');
 	$mysql_server_name = "10.3.135.244";
@@ -21,18 +22,27 @@
     $conn->set_charset('utf8'); 
 
     $target = isset($_GET['target']) ? $_GET['target'] :'';
+=======
+	header('Access-Control-Allow-Origin:*');
+	//用于取出所有的房源信息
+	include "public.php";
+>>>>>>> cts
     //设置分页
     // $qty=isset($_GET['qty'])? $_GET['qty']:0;
 	// var_dump($conn);
 
 
 	//全表查询
+<<<<<<< HEAD
    if($target =="user"){
     $sql = 'select * from user';
    }else{
     $sql = 'select * from room';
    }
 	
+=======
+	$sql = 'select * from room';
+>>>>>>> cts
 
 	//单条查询
 	// $sql = 'select * from hotel where hotel_id ="0009"';

@@ -2,7 +2,7 @@
     <div class="content">
         <div class="bottom" v-if="dataset.length > 0">
             <ul>
-                <li v-for="(value, key) in dataset">
+                <li v-for="(value, key) in dataset" @click="getContent(value)">
                     <div class="housing">
                         <i class="el-icon-star-on"></i>
                         <img src="../../assets/housing1.jpg">
@@ -84,6 +84,12 @@
         methods:{
             data:function(){
                 console.log(666);
+            },
+            // 点击当前的li
+            getContent(value) {
+                // console.log(value.room_id)
+                // 传数据id用query
+                this.$router.push({path:'/housedetails',query:{id:value.room_id}})
             }
         },
         mounted(){
