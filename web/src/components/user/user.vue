@@ -3,18 +3,30 @@
  */
 <template>
     <section>
-  <el-table   :data="tableData" style="width: 100%;text-align:center;">
+    <el-table   :data="tableData" style="width: 100%;text-align:center;">
             <el-table-column type="selection" width="30">
             </el-table-column>
-            <el-table-column prop="hotel_id" label="房东ID"  style="overflow:hidden;width:20px;">
+            <el-table-column prop="user_id" label="用户编号" style="overflow:hidden;width:30px;" >
             </el-table-column>
-            <el-table-column prop="hotel_name" label="房东名" style="overflow:hidden;width:30px;" >
+            <el-table-column prop="nickname" label="昵称" style="overflow:hidden;width:40px;" >
             </el-table-column>
-            <el-table-column prop="hotel_tel" label="房东电话" style="overflow:hidden;width:30px;" >
+             <el-table-column prop="user_tel" label="用户联系" style="overflow:hidden;width:30px;" >
+             </el-table-column>
+            <el-table-column prop="password" label="密码" style="overflow:hidden;width:30px;" >
             </el-table-column>
-            <el-table-column prop="hotel_about" label="房东故事" style="overflow:hidden;width:40px;" >
+            
+             <el-table-column prop="order_id" label="订单编号" style="overflow:hidden;width:30px;" >
             </el-table-column>
+            
+            
            
+            
+            <el-table-column prop="role" label="role" style="overflow:hidden;width:40px;" >
+            </el-table-column>
+            
+           
+            
+            </el-table-column>    
             <el-table-column label="操作" width="150">
                 <template scope="scope">
                     <el-button size="small" type="primary"  @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
@@ -28,17 +40,21 @@
            
             <el-dialog title="编辑" :visible.sync="dialogVisible" :before-close="handleClose">
             <el-form  label-width="80px" :model="editForm" ref="editForm" >
+                <el-form-item label="user_id" >
+                    <el-input auto-complete="off" v-model="editForm.user_id" ></el-input>
+                </el-form-item>
+                <el-form-item label="nickname" >
+                    <el-input auto-complete="off" v-model="editForm.nickname"></el-input>
+                </el-form-item><el-form-item label="user_tel" >
+                    <el-input auto-complete="off" v-model="editForm.user_tel"></el-input>
+                </el-form-item><el-form-item label="role" >
+                    <el-input auto-complete="off" v-model="editForm.role"></el-input>
+                </el-form-item><el-form-item label="order_id" >
+                    <el-input auto-complete="off" v-model="editForm.order_id"></el-input>
+                </el-form-item><el-form-item label="password" >
+                    <el-input auto-complete="off" v-model="editForm.password"></el-input>
+                </el-form-item>
                 
-                <el-form-item label="房东名" >
-                    <el-input auto-complete="off" v-model="editForm.hotel_name"></el-input>
-                </el-form-item>
-                <el-form-item label="房东电话" >
-                    <el-input auto-complete="off" v-model="editForm.hotel_tel"></el-input>
-                </el-form-item>
-                <el-form-item label="房东故事" >
-                    <el-input auto-complete="off" v-model="editForm.hotel_about"></el-input>
-                </el-form-item>
-             
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取消</el-button>
@@ -48,17 +64,21 @@
 <!-- 新增 -->
         <el-dialog title="新增" :visible.sync="addFormVisible" :close-on-click-modal="false">
             <el-form  label-width="80px" :model="addForm" ref="addForm" >
+                 <el-form-item label="user_id" >
+                    <el-input auto-complete="off" v-model="addForm.user_id" ></el-input>
+                </el-form-item>
+                <el-form-item label="nickname" >
+                    <el-input auto-complete="off" v-model="addForm.nickname"></el-input>
+                </el-form-item><el-form-item label="user_tel" >
+                    <el-input auto-complete="off" v-model="addForm.user_tel"></el-input>
+                </el-form-item><el-form-item label="role" >
+                    <el-input auto-complete="off" v-model="addForm.role"></el-input>
+                </el-form-item><el-form-item label="order_id" >
+                    <el-input auto-complete="off" v-model="addForm.order_id"></el-input>
+                </el-form-item><el-form-item label="password" >
+                    <el-input auto-complete="off" v-model="addForm.password"></el-input>
+                </el-form-item>
                 
-                <el-form-item label="房东名" >
-                    <el-input auto-complete="off" v-model="addForm.hotel_name"></el-input>
-                </el-form-item>
-                <el-form-item label="房东电话" >
-                    <el-input auto-complete="off" v-model="addForm.hotel_tel"></el-input>
-                </el-form-item>
-                <el-form-item label="房东故事" >
-                    <el-input auto-complete="off" v-model="addForm.hotel_about"></el-input>
-                </el-form-item>
-            
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click.native="addFormVisible = false">取消</el-button>
@@ -101,8 +121,10 @@
       },
       methods:{
         getRooms:function(){
-            this.axios.get(base+'get_allhotel.php',{
+ 
+            this.axios.get(base+'get_allroom.php',{
                     params:{
+                        target:'user'
                  }
                 }).then(res =>{
                      // console.log(res.data)
@@ -111,16 +133,23 @@
                         item.review =0;
                     }
                      tableData.push({
-                        hotel_id:item.hotel_id,
-                        hotel_name:item.hotel_name,
-                        hotel_tel:item.hotel_tel,
-                        hotel_about:item.hotel_about,
+                        
+                       
+                        
+                        nickname:item.nickname,
+                        order_id:item.order_id,
                       
+                        
+                        password:item.password,
+                      
+                      
+                        role:item.role,
+                        user_id:item.user_id,
+                        user_tel:item.user_tel
                      });   
                     })
                     
                 })
-       
         },
         //删除
         handleDel: function (index, row) {
@@ -130,8 +159,8 @@
                 this.listLoading = true;
                 //NProgress.start();
                 
-                let para = { hotel_id: row.hotel_id*1};
-                para.target="hotel";
+                let para = { user_id: row.user_id*1};
+                para.target="user";
                 this.axios.get(base+'delete.php',{params:para}).then((res) => {
                         // this.listLoading = false;
                         //NProgress.done();
@@ -151,8 +180,8 @@
                             this.editLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.editForm);
-                            para.hotel_id*=1;
-                            this.axios.get(base+'update_hotel.php',{params:para}).then((res) => {
+                            para.user_id*=1;
+                            this.axios.get(base+'updateUser.php',{params:para}).then((res) => {
                                 this.editLoading = false;
                                 //NProgress.done();
                                 this.$message({
@@ -177,8 +206,8 @@
                         let para = Object.assign({}, this.addForm);
                         
                         
-                        // para.room_id*=1;
-                        this.axios.get(base+'addhotel.php',{params:para}).then((res) => {
+                       
+                        this.axios.get(base+'addUser.php',{params:para}).then((res) => {
                             this.addLoading = false;
                             //NProgress.done();
                             this.$message({
@@ -219,8 +248,3 @@
       }
     }
 </script>
-<style lang="scss"  type="text/css">
-  .el-table th>.cell {
-    text-align: center;
-}
-</style>

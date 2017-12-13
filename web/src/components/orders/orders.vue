@@ -3,18 +3,40 @@
  */
 <template>
     <section>
-  <el-table   :data="tableData" style="width: 100%;text-align:center;">
+    <el-table   :data="tableData" style="width: 100%;text-align:center;">
             <el-table-column type="selection" width="30">
             </el-table-column>
-            <el-table-column prop="hotel_id" label="房东ID"  style="overflow:hidden;width:20px;">
+            <el-table-column prop="order_id" label="订单编号" style="overflow:hidden;width:40px;" >
             </el-table-column>
-            <el-table-column prop="hotel_name" label="房东名" style="overflow:hidden;width:30px;" >
+
+            <el-table-column prop="img_url" label="图片路径"  style="overflow:hidden;width:20px;">
             </el-table-column>
-            <el-table-column prop="hotel_tel" label="房东电话" style="overflow:hidden;width:30px;" >
+            <el-table-column prop="people" label="入住人数" style="overflow:hidden;width:30px;" >
             </el-table-column>
-            <el-table-column prop="hotel_about" label="房东故事" style="overflow:hidden;width:40px;" >
+            <el-table-column prop="need_number" label="订房数" style="overflow:hidden;width:30px;" >
             </el-table-column>
-           
+            <el-table-column prop="room_id" label="房间编号" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            <el-table-column prop="user_id" label="用户编号" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            <el-table-column prop="nickname" label="昵称" style="overflow:hidden;width:40px;" >
+            </el-table-column>
+            <el-table-column prop="user_tel" label="电话" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            
+            <el-table-column prop="status" label="入住状态" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            <el-table-column prop="stay_time" label="停留时间" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            <el-table-column prop="leave_time" label="离开时间" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            <el-table-column prop="total" label="总价" style="overflow:hidden;width:30px;" >
+            </el-table-column>
+            
+            <el-table-column prop="remark" label="备注" style="overflow:hidden;width:30px;" >
+
+            </el-table-column>
+              
             <el-table-column label="操作" width="150">
                 <template scope="scope">
                     <el-button size="small" type="primary"  @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
@@ -28,17 +50,31 @@
            
             <el-dialog title="编辑" :visible.sync="dialogVisible" :before-close="handleClose">
             <el-form  label-width="80px" :model="editForm" ref="editForm" >
-                
-                <el-form-item label="房东名" >
-                    <el-input auto-complete="off" v-model="editForm.hotel_name"></el-input>
+                <el-form-item label="图片路径" >
+                    <el-input auto-complete="off" v-model="editForm.img_url" ></el-input>
                 </el-form-item>
-                <el-form-item label="房东电话" >
-                    <el-input auto-complete="off" v-model="editForm.hotel_tel"></el-input>
+                <el-form-item label="离开时间" >
+                    <el-input auto-complete="off" v-model="editForm.leave_time"></el-input>
+                </el-form-item><el-form-item label="需要房间" >
+                    <el-input auto-complete="off" v-model="editForm.need_number"></el-input>
+                </el-form-item><el-form-item label="用户昵称" >
+                    <el-input auto-complete="off" v-model="editForm.nickname"></el-input>
+                </el-form-item><el-form-item label="联系用户" >
+                    <el-input auto-complete="off" v-model="editForm.user_tel"></el-input>
+                </el-form-item><el-form-item label="入住状态" >
+                    <el-input auto-complete="off" v-model="editForm.status"></el-input>
+                </el-form-item><el-form-item label="停留时间" >
+                    <el-input auto-complete="off" v-model="editForm.stay_time"></el-input>
+                </el-form-item><el-form-item label="总价" >
+                    <el-input auto-complete="off" v-model="editForm.total"></el-input>
+                </el-form-item><el-form-item label="用户编号" >
+                    <el-input auto-complete="off" v-model="editForm.user_id"></el-input>
                 </el-form-item>
-                <el-form-item label="房东故事" >
-                    <el-input auto-complete="off" v-model="editForm.hotel_about"></el-input>
+                <el-form-item label="订单编号" >
+                    <el-input auto-complete="off"v-model="editForm.order_id"></el-input>
+                </el-form-item><el-form-item label="入住人数" >
+                    <el-input auto-complete="off" v-model="editForm.people"></el-input>
                 </el-form-item>
-             
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取消</el-button>
@@ -48,17 +84,32 @@
 <!-- 新增 -->
         <el-dialog title="新增" :visible.sync="addFormVisible" :close-on-click-modal="false">
             <el-form  label-width="80px" :model="addForm" ref="addForm" >
-                
-                <el-form-item label="房东名" >
-                    <el-input auto-complete="off" v-model="addForm.hotel_name"></el-input>
+                <el-form-item label="图片路径" >
+                    <el-input auto-complete="off" v-model="addForm.img_url"></el-input>
                 </el-form-item>
-                <el-form-item label="房东电话" >
-                    <el-input auto-complete="off" v-model="addForm.hotel_tel"></el-input>
+                <el-form-item label="离开时间" >
+                    <el-input auto-complete="off" v-model="addForm.leave_time"></el-input>
+                </el-form-item><el-form-item label="订房数量" >
+                    <el-input auto-complete="off" v-model="addForm.need_number"></el-input>
+                </el-form-item><el-form-item label="用户昵称" >
+                    <el-input auto-complete="off" v-model="addForm.nickname"></el-input>
+                </el-form-item><el-form-item label="联系用户" >
+                    <el-input auto-complete="off" v-model="addForm.user_tel"></el-input>
+                </el-form-item><el-form-item label="入住状态" >
+                    <el-input auto-complete="off" v-model="addForm.status"></el-input>
+                </el-form-item><el-form-item label="停留时间" >
+                    <el-input auto-complete="off" v-model="addForm.stay_time"></el-input>
+                </el-form-item><el-form-item label="总价" >
+                    <el-input auto-complete="off" v-model="addForm.total"></el-input>
+                </el-form-item><el-form-item label="用户编号" >
+                    <el-input auto-complete="off" v-model="addForm.user_id"></el-input>
                 </el-form-item>
-                <el-form-item label="房东故事" >
-                    <el-input auto-complete="off" v-model="addForm.hotel_about"></el-input>
+                <el-form-item label="订单编号" >
+                    <el-input auto-complete="off"v-model="addForm.order_id"></el-input>
+                </el-form-item><el-form-item label="入住人数" >
+                    <el-input auto-complete="off" v-model="addForm.people"></el-input>
+               
                 </el-form-item>
-            
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click.native="addFormVisible = false">取消</el-button>
@@ -73,6 +124,7 @@
     let base='http://localhost:8088/32/PHP/';
      export default {
       data() {
+
         return {
           tableData,
            dialogVisible: false,
@@ -101,26 +153,34 @@
       },
       methods:{
         getRooms:function(){
-            this.axios.get(base+'get_allhotel.php',{
+ 
+            this.axios.get(base+'get_orders.php',{
                     params:{
                  }
                 }).then(res =>{
-                     // console.log(res.data)
+                      console.log(res.data)
                     res.data.map(function(item){
                     if(item.review ==undefined){
                         item.review =0;
                     }
                      tableData.push({
-                        hotel_id:item.hotel_id,
-                        hotel_name:item.hotel_name,
-                        hotel_tel:item.hotel_tel,
-                        hotel_about:item.hotel_about,
-                      
+                        img_url:item.img_url,
+                        leave_time:item.leave_time,
+                        need_number:item.need_number,
+                        nickname:item.nickname,
+                        user_tel:item.user_tel,
+                        room_id:item.room_id,
+                        status:item.status,
+                        stay_time:item.img_url,
+                        total:'$'+item.total,
+                        user_id:item.user_id,
+                        remark:item.remark,
+                        order_id:item.order_id,
+                        people:item.people,
                      });   
                     })
                     
                 })
-       
         },
         //删除
         handleDel: function (index, row) {
@@ -130,8 +190,7 @@
                 this.listLoading = true;
                 //NProgress.start();
                 
-                let para = { hotel_id: row.hotel_id*1};
-                para.target="hotel";
+                let para = { img_url: row.img_url*1};
                 this.axios.get(base+'delete.php',{params:para}).then((res) => {
                         // this.listLoading = false;
                         //NProgress.done();
@@ -151,8 +210,8 @@
                             this.editLoading = true;
                             //NProgress.start();
                             let para = Object.assign({}, this.editForm);
-                            para.hotel_id*=1;
-                            this.axios.get(base+'update_hotel.php',{params:para}).then((res) => {
+                            para.img_url*=1;
+                            this.axios.get(base+'updateOrder.php',{params:para}).then((res) => {
                                 this.editLoading = false;
                                 //NProgress.done();
                                 this.$message({
@@ -175,10 +234,10 @@
                         this.addLoading = true;
                         //NProgress.start();
                         let para = Object.assign({}, this.addForm);
+                        para.target='order';
                         
                         
-                        // para.room_id*=1;
-                        this.axios.get(base+'addhotel.php',{params:para}).then((res) => {
+                        this.axios.get(base+'addroom.php',{params:para}).then((res) => {
                             this.addLoading = false;
                             //NProgress.done();
                             this.$message({
@@ -187,7 +246,7 @@
                             });
                             this.$refs['addForm'].resetFields();
                             this.addFormVisible = false;
-                            this.getUsers();
+                            this.getRooms();
                         });
                     });
                 }
@@ -219,8 +278,3 @@
       }
     }
 </script>
-<style lang="scss"  type="text/css">
-  .el-table th>.cell {
-    text-align: center;
-}
-</style>
