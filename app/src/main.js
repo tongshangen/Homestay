@@ -13,8 +13,6 @@ import store from './vuex/store'
 Vue.use(ElementUI)
 Vue.use(Vuex)
 
->>>>>>> wy
-
 new Vue({
   el: '#app',
   router,
