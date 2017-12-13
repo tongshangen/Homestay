@@ -91,7 +91,7 @@
 
           this.prop['price1'] = this.value1[0];
           this.prop['price2'] = this.value1[1];
-          // console.log(this.prop)
+          console.log(this.prop)
           // this.$router.push({name: 'list',query: {room_type: this.radio2,max_people: this.max_people,bedroom:this.bedroom,bed:this.bed,wc:this.wc,device:this.devList}});
           this.$router.push({name: 'list',query:this.prop});
         },

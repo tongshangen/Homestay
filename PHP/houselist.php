@@ -11,8 +11,8 @@
     $bedroom = isset($_POST["bedroom"]) ? $_POST["bedroom"] : '';
     $bed = isset($_POST["bed"]) ? $_POST["bed"] : '';
     $wc = isset($_POST["wc"]) ? $_POST["wc"] : '';
-    $price1 = isset($_POST["price1"]) ? $_POST["price1"] : 0;
-    $price2 = isset($_POST["price2"]) ? $_POST["price2"] : 1500;
+    $price1 = isset($_POST["price1"]) ? $_POST["price1"] : '0';
+    $price2 = isset($_POST["price2"]) ? $_POST["price2"] : '1500';
 
     $sql;
     

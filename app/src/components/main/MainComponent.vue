@@ -182,75 +182,75 @@
 				duration: 300
 				},
 				pages1:[
-				{
-				html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
-						<div class="mass">
-								<div class="like_left">
-									<h3>京恋清水</h3>
-									<p>整套-7张床-可住7人-京都市</p>
-									<div class="star">
-										<ul>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-										</ul>
-										<p class="pinjia">15人评价</p>
-									</div>
-							</div>	
-						<div class="like_right">
-							<i></i>
-						</div>
-						</div>
-					</div>`,
-				},
-				{
-					html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
-						<div class="mass">
-								<div class="like_left">
-									<h3>京恋清水</h3>
-									<p>整套-7张床-可住7人-京都市</p>
-									<div class="star">
-										<ul>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-										</ul>
-										<p class="pinjia">15人评价</p>
-									</div>
-							</div>	
-						<div class="like_right">
-							<i></i>
-						</div>
-						</div>
-					</div>`,
-				},
-				{
-					html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
-						<div class="mass">
-								<div class="like_left">
-									<h3>京恋清水</h3>
-									<p>整套-7张床-可住7人-京都市</p>
-									<div class="star">
-										<ul>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-											<li><i class="el-icon-star-on"></i></li>
-										</ul>
-										<p class="pinjia">15人评价</p>
-									</div>
-							</div>	
-						<div class="like_right">
-							<i></i>
-						</div>
-						</div>
-					</div>`,
-				}
+				// {
+				// html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+				// 		<div class="mass">
+				// 				<div class="like_left">
+				// 					<h3>京恋清水</h3>
+				// 					<p>整套-7张床-可住7人-京都市</p>
+				// 					<div class="star">
+				// 						<ul>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 						</ul>
+				// 						<p class="pinjia">15人评价</p>
+				// 					</div>
+				// 			</div>	
+				// 		<div class="like_right">
+				// 			<i></i>
+				// 		</div>
+				// 		</div>
+				// 	</div>`,
+				// },
+				// {
+				// 	html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+				// 		<div class="mass">
+				// 				<div class="like_left">
+				// 					<h3>京恋清水</h3>
+				// 					<p>整套-7张床-可住7人-京都市</p>
+				// 					<div class="star">
+				// 						<ul>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 						</ul>
+				// 						<p class="pinjia">15人评价</p>
+				// 					</div>
+				// 			</div>	
+				// 		<div class="like_right">
+				// 			<i></i>
+				// 		</div>
+				// 		</div>
+				// 	</div>`,
+				// },
+				// {
+				// 	html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+				// 		<div class="mass">
+				// 				<div class="like_left">
+				// 					<h3>京恋清水</h3>
+				// 					<p>整套-7张床-可住7人-京都市</p>
+				// 					<div class="star">
+				// 						<ul>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 							<li><i class="el-icon-star-on"></i></li>
+				// 						</ul>
+				// 						<p class="pinjia">15人评价</p>
+				// 					</div>
+				// 			</div>	
+				// 		<div class="like_right">
+				// 			<i></i>
+				// 		</div>
+				// 		</div>
+				// 	</div>`,
+				// }
 				],
 				//Sliding configuration [obj]
 				sliderinit1: {
@@ -267,7 +267,7 @@
 				},
 				pages2:[
 				{
-				html: `<img src="../src/assets/fangdong3.jpg">
+				html: `<img src="${this.dataset}">
 						<div class="liuyan">2个月爆改1949年的老房子，陈坤徐若瑄都成这儿的常客</div>`,
 				},
 				{
@@ -292,6 +292,8 @@
 				timingFunction: 'ease',
 				duration: 300
 				},
+				dataset:[],
+				aa:{}
 			}
 		},
 		components: {
@@ -316,6 +318,59 @@
 			onInit (data) {
 				// console.log(data)
 			}
+		},
+		computed: {
+			reversedMessage: {
+				get: function(){
+					// var aa ={};
+					axios({
+						url: 'http://localhost:3004/remRandom.php',
+						method: 'post',
+						data: qs.stringify(this.$route.query),
+						headers: {
+							'Content-Type': 'application/x-www-form-urlencoded'
+						}
+					}).then(res => {
+						console.log(res)
+						this.dataset = res.data;
+						for(var i=0;i<this.dataset.length;i++){
+							var img = JSON.parse(this.dataset[i].img_url)
+							console.log(img)
+							this.aa.html=`<div><div class="img"><img src="${img[0]
+}"></div>
+								<div class="mass">
+										<div class="like_left">
+											<h3>京恋清水</h3>
+											<p>${this.dataset[i].type_name}-${this.dataset[i].bedroom
+}张床-可住7人-京都市</p>
+											<div class="star">
+												<ul>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+													<li><i class="el-icon-star-on"></i></li>
+												</ul>
+												<p class="pinjia">15人评价</p>
+											</div>
+									</div>	
+								<div class="like_right">
+									<i></i>
+								</div>
+								</div>
+							</div>`
+						console.log(this.aa);
+						
+						}
+						this.pages1.push(this.aa);
+					});
+					
+				}
+				
+			}
+		},
+		 mounted(){
+			this.reversedMessage
 		}
 	}
 

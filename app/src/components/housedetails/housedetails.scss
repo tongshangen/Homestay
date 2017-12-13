@@ -1,110 +1,126 @@
-html,body{
-	width: 100%;
-	height: 100%;
+// html,
+// body {
+//     width: 100%;
+//     height: 100%;
+// }
+// #app,
+// .ddd {
+//     width: 100%;
+//     height: 100%;
+// }
+.ddd {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-#app,.Main{
-	width: 100%;
-	height: 100%;
-}
-.Main{
-	height: 100%;
-    display:flex;
-	flex-direction:column;
-}
-.top{
-    height:80px;
-    header{
+
+.top {
+    height: 80px;
+    header {
         height: 80px;
         position: relative;
-        i{
+        i {
             position: absolute;
             left: 10px;
-            top:20px;
+            top: 20px;
         }
-        h3{
+        h3 {
             // height: 156px;
             text-align: center;
             padding-top: 20px;
         }
-        >ul{
-           position: absolute;right: 20px;top:10px;
-           display: flex;
-            li{
+        >ul {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            display: flex;
+            li {
                 flex: 1;
-                flex-direction:column;
+                flex-direction: column;
                 text-align: center;
                 height: 55px;
                 line-height: 55px;
             }
         }
+        .banner {
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
-.main{
+.ma {
     flex: 1;
-    .bottom{
-       overflow: hidden;
-       height: 3360px;
-       .img{
+    overflow-x: hidden;
+    .bottom {
+        // overflow: hidden;
+        // height: 35000px;
+        .img {
             position: relative;
             height: 310px;
-            img{
+            img {
                 display: block;
                 height: 310px;
                 width: 100%;
             }
-            span{
+            span {
                 position: absolute;
             }
-            .price{
-                left:20px;bottom: 0;
+            .price {
+                left: 20px;
+                bottom: 0;
                 width: 150px;
                 height: 80px;
-                background:#000;
+                background: #000;
                 opacity: 0.5;
-                color:#fff;
+                color: #fff;
                 line-height: 80px;
                 font-size: 30px;
                 text-align: center;
             }
-            >p{
+            >p {
                 width: 100px;
-                right: 0;bottom: 0;
+                right: 0;
+                bottom: 0;
                 height: 30px;
             }
         }
-        .house_mass{
+        .house_mass {
             padding: 20px 20px;
             height: 200px;
             position: relative;
-            h3{
+            h3 {
                 height: 60px;
                 line-height: 60px;
             }
-            .touxiang{
+            .touxiang {
                 position: absolute;
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
-                border:5px solid #fff;
+                border: 5px solid #fff;
                 left: 20px;
-                top:100px;
-                background:url('../../assets/fangdong1.jpg')
+                top: 100px;
+                background: url('../../assets/fangdong1.jpg')
             }
-            >span{
-                position: absolute;left:150px;top:130px;
+            >span {
+                position: absolute;
+                left: 150px;
+                top: 130px;
             }
         }
-        .rent{
+        .rent {
             height: 200px;
             padding: 30px;
-            h3{
-                height: 60px;line-height: 60px;
+            h3 {
+                height: 60px;
+                line-height: 60px;
             }
-            ul{
+            ul {
                 display: flex;
-
-                li{
+                border-bottom: 1px solid #cccccc;
+                li {
                     flex: 1;
                     height: 112px;
                     text-align: center;
@@ -112,218 +128,233 @@ html,body{
                 }
             }
         }
-        .account{
+        .account {
             height: 230px;
-            padding:0 20px;
-            h3{
-                height: 60px;line-height: 60px;
+            padding: 0 20px;
+            h3 {
+                height: 60px;
+                line-height: 60px;
             }
-            >p{
+            >p {
                 height: 100px;
                 line-height: 50px;
-                color:#333;
-                padding:0 40px;
+                color: #333;
+                padding: 0 40px;
                 overflow: hidden;
             }
-            >span{
-                margin-left:30px;
-                color:#FF4942;
+            >span {
+                margin-left: 30px;
+                color: #FF4942;
             }
         }
-        .appraise{
+        .appraise {
             height: 260px;
-            padding:40px 20px;
-            .star{
-                h3{
-                    float: left;margin-right: 20px;
+            padding: 40px 20px;
+            .star {
+                h3 {
+                    float: left;
+                    margin-right: 20px;
                 }
-                >ul{
-                    li{
+                >ul {
+                    li {
                         float: left;
-                        width: 25px;height: 25px;
+                        width: 25px;
+                        height: 25px;
                         flex: 1;
-                        i{
-                           color:#F7A621;
+                        i {
+                            color: #F7A621;
                         }
                     }
                 }
             }
-            .infor{
+            .infor {
                 height: 280px;
-                ul{
-                    li{
-                        .top{
+                padding: 0 20px;
+                border-bottom: 1px solid #cccccc;
+                ul {
+                    li {
+                        .top {
                             height: 120px;
                             padding-top: 20px;
                             position: relative;
-                            .touxiang{
+                            .touxiang {
                                 position: absolute;
                                 width: 100px;
                                 height: 100px;
                                 border-radius: 50%;
-                                border:5px solid #fff;
+                                border: 5px solid #fff;
                                 left: 10px;
-                                top:20px;
-                                background:url('../../assets/fangdong1.jpg')
-    
+                                top: 20px;
+                                background: url('../../assets/fangdong1.jpg')
                             }
-                            h3{
+                            h3 {
                                 padding-left: 130px;
-                                color:#333;
+                                color: #333;
                             }
-                            p{
+                            p {
                                 padding-left: 130px;
-                                color:#848A8C;
+                                color: #848A8C;
                             }
                         }
-                        .pinglun{
+                        .pinglun {
                             height: 80px;
                             line-height: 40px;
                             padding-left: 20px;
-                            margin-top:20px;
+                            margin-top: 20px;
                         }
                     }
                 }
-                >span{
-                    margin-top:20px;
-                    color:#FF4942;
+                >span {
+                    margin-top: 20px;
+                    color: #FF4942;
                 }
             }
-            .address{
-                h3{
+            .address {
+                padding: 0 20px;
+                h3 {
                     height: 80px;
                     line-height: 80px;
                 }
-                p{
+                p {
                     height: 80px;
                     line-height: 80px;
                 }
-                .Img{
+                .Img {
                     height: 330px;
-                    img{
+                    img {
                         height: 330px;
                     }
                 }
             }
-            .bed{
-                h3{
-                    margin-top:30px;
+            .bed {
+                margin-top: 20px;
+                padding: 0 20px;
+                border-top: 1px solid #cccccc;
+                border-bottom: 1px solid #cccccc;
+                h3 {
+                    margin-top: 30px;
                     height: 80px;
                     line-height: 80px;
                 }
-                ul{
+                ul {
                     display: flex;
-	                flex-direction:column;
-                    li{
+                    flex-direction: column;
+                    li {
                         flex: 1;
                         height: 80px;
                         line-height: 80px;
                     }
                 }
             }
-            .check_in{
-                h3{
-                    margin-top:30px;
+            .check_in {
+                h3 {
+                    margin-top: 30px;
                     height: 80px;
                     line-height: 80px;
                 }
-                ul{
-                    li{
+                ul {
+                    border-top: 1px solid #cccccc;
+                    border-bottom: 1px solid #cccccc;
+                    padding: 0 20px;
+                    li {
                         height: 80px;
                         line-height: 80px;
-                        color:#333;
-                        span:first-child{
+                        color: #333;
+                        span:first-child {
                             float: left;
                         }
-                        span:last-child{
+                        span:last-child {
                             float: right;
                         }
                     }
-                    
                 }
             }
-            .facility{
-                h3{
-                    margin-top:30px;
+            .facility {
+                h3 {
+                    margin-top: 30px;
                     height: 80px;
                     line-height: 80px;
                 }
-                ul{
+                ul {
                     height: 150px;
                     display: flex;
-                    li{
+                    padding: 0 20px;
+                    border-bottom: 1px solid #cccccc;
+                    li {
                         flex: 1;
-                        padding-top:80px;
+                        padding-top: 80px;
                         text-align: center;
                     }
                 }
             }
-            .similarity{
-               
+            .similarity {
                 height: 560px;
-                h3{
+                margin-top: 20px;
+                h3 {
                     height: 44px;
                     line-height: 44px;
                 }
-                >ul{
-                    padding-top:20px;
+                >ul {
+                    padding-top: 20px;
                     display: flex;
-                    >li{
+                    >li {
                         flex: 1;
-                        
                         width: 540px;
                         margin-right: 20px;
-                        .img{
+                        .img {
                             width: 540px;
-                            img{
+                            img {
                                 width: 540px;
                                 height: 315px;
                             }
                         }
-        
-                        .mass{
+                        .mass {
                             display: flex;
                             height: 132px;
-                            .like_left{
+                            .like_left {
                                 flex: 1;
-                                padding-top:15px;
-                                h3{
+                                padding-top: 15px;
+                                h3 {
                                     height: 45px;
                                     line-height: 45px;
-                                    color:#333333;
+                                    color: #333333;
                                     font-size: 22px;
-                                    >p{
-                                        color:#84868C;
-                                        font-size:16px;
+                                    >p {
+                                        color: #84868C;
+                                        font-size: 16px;
                                     }
-                                    .star{
-                                        >ul{
-                                            li{
+                                    .star {
+                                        >ul {
+                                            li {
                                                 float: left;
-                                                width: 25px;height: 25px;
+                                                width: 25px;
+                                                height: 25px;
                                                 flex: 1;
-                                                i{
-                                                   color:#F7A621;
+                                                i {
+                                                    color: #F7A621;
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                            .like_right{
+                            .like_right {
                                 width: 196px;
-                                >i{
+                                >i {
                                     display: block;
                                     width: 55px;
                                     height: 55px;
                                     border-radius: 50%;
-                                    background:url('../../assets/like1.jpg');
-                                    margin:0 auto;
-                                    margin-top:20px;
+                                    background: url('../../assets/like1.jpg');
+                                    margin: 0 auto;
+                                    margin-top: 20px;
                                 }
-                                >button{
-                                    margin-left:70px;
-                                    border:none;
+                                >button {
+                                    margin-left: 70px;
+                                    border: none;
+                                    width: 60px;
+                                    height: 40px;
+                                    // font-size: 30px;
                                     border: 2px solid #39B2C6;
                                     border-left: 1px solid #39B2C6;
                                     border-right: 1px solid #39B2C6;
@@ -338,23 +369,24 @@ html,body{
         }
     }
 }
-footer{
+
+footer {
     height: 80px;
-    .btn{
+    .btn {
         display: flex;
         // padding:0 20px;
-        button{
+        button {
             flex: 1;
             width: 50%;
             height: 80px;
-            border:none;
-            font-size:30px;
-            color:#fff;
+            border: none;
+            font-size: 30px;
+            color: #fff;
         }
-        button:first-child{
+        button:first-child {
             background: #39B2C6;
         }
-        button:last-child{
+        button:last-child {
             background: #FF6563;
         }
     }
