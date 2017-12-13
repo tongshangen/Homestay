@@ -138,10 +138,10 @@
 		</div>
 		<footer>
 			<ul>
-				<li><i class="el-icon-menu"></i>首页</li>
+				<li @click="index"><i class="el-icon-menu"></i>首页</li>
 				<li><i class="el-icon-star-on"></i>收藏</li>
-				<li><i class="el-icon-tickets"></i>订单</li>
-				<li><i class="el-icon-goods"></i>我的</li>
+				<li @click="order"><i class="el-icon-tickets"></i>订单</li>
+				<li @click="my"><i class="el-icon-goods"></i>我的</li>
 			</ul>
 		</footer>
 	</div>
@@ -183,75 +183,75 @@
 				duration: 300
 				},
 				pages1:[
-				// {
-				// html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
-				// 		<div class="mass">
-				// 				<div class="like_left">
-				// 					<h3>京恋清水</h3>
-				// 					<p>整套-7张床-可住7人-京都市</p>
-				// 					<div class="star">
-				// 						<ul>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 						</ul>
-				// 						<p class="pinjia">15人评价</p>
-				// 					</div>
-				// 			</div>	
-				// 		<div class="like_right">
-				// 			<i></i>
-				// 		</div>
-				// 		</div>
-				// 	</div>`,
-				// },
-				// {
-				// 	html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
-				// 		<div class="mass">
-				// 				<div class="like_left">
-				// 					<h3>京恋清水</h3>
-				// 					<p>整套-7张床-可住7人-京都市</p>
-				// 					<div class="star">
-				// 						<ul>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 						</ul>
-				// 						<p class="pinjia">15人评价</p>
-				// 					</div>
-				// 			</div>	
-				// 		<div class="like_right">
-				// 			<i></i>
-				// 		</div>
-				// 		</div>
-				// 	</div>`,
-				// },
-				// {
-				// 	html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
-				// 		<div class="mass">
-				// 				<div class="like_left">
-				// 					<h3>京恋清水</h3>
-				// 					<p>整套-7张床-可住7人-京都市</p>
-				// 					<div class="star">
-				// 						<ul>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 							<li><i class="el-icon-star-on"></i></li>
-				// 						</ul>
-				// 						<p class="pinjia">15人评价</p>
-				// 					</div>
-				// 			</div>	
-				// 		<div class="like_right">
-				// 			<i></i>
-				// 		</div>
-				// 		</div>
-				// 	</div>`,
-				// }
+				{
+				html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+						<div class="mass">
+								<div class="like_left">
+									<h3>京恋清水</h3>
+									<p>整套-7张床-可住7人-京都市</p>
+									<div class="star">
+										<ul>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+										</ul>
+										<p class="pinjia">15人评价</p>
+									</div>
+							</div>	
+						<div class="like_right">
+							<i></i>
+						</div>
+						</div>
+					</div>`,
+				},
+				{
+					html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+						<div class="mass">
+								<div class="like_left">
+									<h3>京恋清水</h3>
+									<p>整套-7张床-可住7人-京都市</p>
+									<div class="star">
+										<ul>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+										</ul>
+										<p class="pinjia">15人评价</p>
+									</div>
+							</div>	
+						<div class="like_right">
+							<i></i>
+						</div>
+						</div>
+					</div>`,
+				},
+				{
+					html: `<div><div class="img"><img src="../src/assets/like1.jpg"></div>
+						<div class="mass">
+								<div class="like_left">
+									<h3>京恋清水</h3>
+									<p>整套-7张床-可住7人-京都市</p>
+									<div class="star">
+										<ul>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+											<li><i class="el-icon-star-on"></i></li>
+										</ul>
+										<p class="pinjia">15人评价</p>
+									</div>
+							</div>	
+						<div class="like_right">
+							<i></i>
+						</div>
+						</div>
+					</div>`,
+				}
 				],
 				//Sliding configuration [obj]
 				sliderinit1: {
@@ -268,7 +268,7 @@
 				},
 				pages2:[
 				{
-				html: `<img src="${this.dataset}">
+				html: `<img src="../src/assets/fangdong3.jpg">
 						<div class="liuyan">2个月爆改1949年的老房子，陈坤徐若瑄都成这儿的常客</div>`,
 				},
 				{
@@ -301,6 +301,15 @@
 			slider
 		},
 		methods:{
+			index:function(){
+				this.$router.push({name:'main'});
+			},
+			my: function(){
+				this.$router.push({name:'user'});
+			},
+			order: function(){
+				// this.$router.push({name:'main_wy'});
+			},
 			sherch:function(){
 				// console.log(666);
 				this.$router.push({name: 'destination'});
@@ -352,38 +361,38 @@
 							'Content-Type': 'application/x-www-form-urlencoded'
 						}
 					}).then(res => {
-						console.log(res)
+						// console.log(res)
 						this.dataset = res.data;
 						for(var i=0;i<this.dataset.length;i++){
-							var img = JSON.parse(this.dataset[i].img_url)
+							var img = JSON.parse(this.dataset[i].img_url);
 							console.log(img)
-							this.aa.html=`<div><div class="img"><img src="${img[0]
-}"></div>
-								<div class="mass">
-										<div class="like_left">
-											<h3>京恋清水</h3>
-											<p>${this.dataset[i].type_name}-${this.dataset[i].bedroom
-}张床-可住7人-京都市</p>
-											<div class="star">
-												<ul>
-													<li><i class="el-icon-star-on"></i></li>
-													<li><i class="el-icon-star-on"></i></li>
-													<li><i class="el-icon-star-on"></i></li>
-													<li><i class="el-icon-star-on"></i></li>
-													<li><i class="el-icon-star-on"></i></li>
-												</ul>
-												<p class="pinjia">15人评价</p>
-											</div>
-									</div>	
-								<div class="like_right">
-									<i></i>
-								</div>
-								</div>
-							</div>`
-						console.log(this.aa);
+// 							this.aa.html=`<div><div class="img"><img src="${img[0]
+// }"></div>
+// 								<div class="mass">
+// 										<div class="like_left">
+// 											<h3>京恋清水</h3>
+// 											<p>${this.dataset[i].type_name}-${this.dataset[i].bedroom
+// }张床-可住7人-京都市</p>
+// 											<div class="star">
+// 												<ul>
+// 													<li><i class="el-icon-star-on"></i></li>
+// 													<li><i class="el-icon-star-on"></i></li>
+// 													<li><i class="el-icon-star-on"></i></li>
+// 													<li><i class="el-icon-star-on"></i></li>
+// 													<li><i class="el-icon-star-on"></i></li>
+// 												</ul>
+// 												<p class="pinjia">15人评价</p>
+// 											</div>
+// 									</div>	
+// 								<div class="like_right">
+// 									<i></i>
+// 								</div>
+// 								</div>
+// 							</div>`
+						// console.log(this.aa);
 						
 						}
-						this.pages1.push(this.aa);
+						// this.pages1.push(this.aa);
 					});
 					
 				}

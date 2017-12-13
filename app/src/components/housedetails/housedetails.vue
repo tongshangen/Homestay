@@ -6,7 +6,7 @@
                 <h3>房源详情</h3>
                 <ul>
                     <!-- <li>收藏</li> -->
-                    <li>登录</li>
+                    <li @click="login">登录</li>
                 </ul>
                 <!-- <div class="banner"> -->
                 <!-- </div> -->
@@ -254,6 +254,9 @@
             }
         },
         methods:{
+            login: function(){
+                this.$router.push({name:'login'});
+            },
             toDetails() {
                 // console.log(this.$router);
                 let that = this;

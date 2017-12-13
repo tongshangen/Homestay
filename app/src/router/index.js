@@ -28,8 +28,9 @@ import DestinationComponent from '../components/destination/destination.vue';
 // import LoginComponent from '../components/login/login.vue';
 // import RegisterComponent from '../components/register/register.vue';
 import MyorderComponent from '../components/myorder/myorder.vue'
-
+import UserComponent from '../components/user/user.vue'
 import HouseorderDetailsComponent from '../components/houseorderDetails/houseorderDetails.vue'
+import My_wyComponent from '../components/my_wy/my_wy.vue'
 
 Vue.use(VueRouter);
 
@@ -72,7 +73,11 @@ var router = new VueRouter({
                 }
             ] 
         },
-       
+        {
+            path: '/user',
+            name: 'user',
+            component: UserComponent
+        },
         {
             path: '/destination',
             name: 'destination',

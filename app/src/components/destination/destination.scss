@@ -24,11 +24,12 @@
             top:20px;
             left:40px;
         }
-        // span{
-        //     position: absolute;
-        //     right: 100px;
-        //     top:30px;
-        // }
+        span{
+            position: absolute;
+            right: 100px;
+            top:30px;
+            font-size: 30px;
+        }
     }
     .Citys{
         flex: 1;
@@ -40,6 +41,7 @@
                 color:#666;
                 line-height: 60px;
                 padding-left:30px;
+                font-size: 40px;
             }
             ul{
                 height: 350px;
@@ -50,6 +52,8 @@
                     text-align: center;
                     height: 60px;
                     width: 150px;
+                    font-size: 30px;
+                    border-bottom: 0 none;
                 }
             }
         }
@@ -63,6 +67,7 @@
                         background-color:#eee;
                         height: 50px;
                         line-height: 50px;
+                        border-bottom: 0 none;
                     }
                     >ul{
                         padding:10px 0;
@@ -71,6 +76,7 @@
                             font-size: 16px;
                             height: 70px;
                             line-height: 70px;
+                            border-bottom: 0 none;
                         }
                     }
                 }

@@ -22,14 +22,22 @@
             </div>
             <div class="main_footer" @click="checkout">
                 <i class="el-icon-refresh"></i>
-                <span>切换为房客</span>
+                <span>切换为房东</span>
             </div>
         </div>
+        <footer class="ft">
+			<ul>
+				<li @click="index"><i class="el-icon-menu"></i>首页</li>
+				<li><i class="el-icon-star-on"></i>收藏</li>
+				<li ><i class="el-icon-tickets"></i>订单</li>
+				<li ><i class="el-icon-goods"></i>我的</li>
+			</ul>
+		</footer>
     </div>
 </template>
 
 <script>
-    import './my_wy.scss'
+    import './user.scss'
 
     export default {
         name: 'nav',
@@ -39,8 +47,11 @@
             }
         },
         methods: {
-            checkout: function(){
+            index:function(){
                 this.$router.push({path:'/'});
+            },
+            checkout: function(){
+                this.$router.push({path:'main_wy'});
             },
             order: function(){
                 this.$router.push({name:'main_wy'});

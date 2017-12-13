@@ -28,6 +28,7 @@
             // height: 156px;
             text-align: center;
             padding-top: 20px;
+            
         }
         >ul {
             position: absolute;
@@ -40,6 +41,8 @@
                 text-align: center;
                 height: 55px;
                 line-height: 55px;
+                font-size: 40px;
+                border-bottom: 0 none;
             }
         }
         .banner {
@@ -93,6 +96,7 @@
             h3 {
                 height: 60px;
                 line-height: 60px;
+                font-size: 42px;
             }
             .touxiang {
                 position: absolute;
@@ -108,6 +112,7 @@
                 position: absolute;
                 left: 150px;
                 top: 130px;
+                font-size: 38px;
             }
         }
         .rent {
@@ -116,6 +121,7 @@
             h3 {
                 height: 60px;
                 line-height: 60px;
+                font-size: 42px;
             }
             ul {
                 display: flex;
@@ -125,6 +131,8 @@
                     height: 112px;
                     text-align: center;
                     line-height: 112px;
+                    font-size: 30px;
+                    border-bottom: 0 none;
                 }
             }
         }
@@ -134,6 +142,7 @@
             h3 {
                 height: 60px;
                 line-height: 60px;
+                font-size: 42px;
             }
             >p {
                 height: 100px;
@@ -141,6 +150,7 @@
                 color: #333;
                 padding: 0 40px;
                 overflow: hidden;
+                font-size: 30px;
             }
             >span {
                 margin-left: 30px;
@@ -154,25 +164,36 @@
                 h3 {
                     float: left;
                     margin-right: 20px;
+                    font-size: 42px;
+                }
+                p{
+                    margin-left: 400px;
                 }
                 >ul {
+                    float: left;
+                    
                     li {
-                        float: left;
+                        // float: left;
                         width: 25px;
                         height: 25px;
                         flex: 1;
                         i {
+                            display: inline-block;
                             color: #F7A621;
+                            width: 25px;
+                            height: 25px;
+                            margin-left: 40px;
                         }
                     }
                 }
             }
             .infor {
-                height: 280px;
+                height: 310px;
                 padding: 0 20px;
                 border-bottom: 1px solid #cccccc;
                 ul {
                     li {
+                        border-bottom:0 none;
                         .top {
                             height: 120px;
                             padding-top: 20px;
@@ -190,10 +211,12 @@
                             h3 {
                                 padding-left: 130px;
                                 color: #333;
+                                font-size: 42px;
                             }
                             p {
                                 padding-left: 130px;
                                 color: #848A8C;
+                                font-size: 42px;
                             }
                         }
                         .pinglun {
@@ -201,12 +224,15 @@
                             line-height: 40px;
                             padding-left: 20px;
                             margin-top: 20px;
+                            font-size: 30px;
                         }
                     }
                 }
                 >span {
-                    margin-top: 20px;
+                    // margin-top: 20px;
                     color: #FF4942;
+                    font-size: 30px;
+                    // margin-top: 10px;
                 }
             }
             .address {
@@ -214,10 +240,12 @@
                 h3 {
                     height: 80px;
                     line-height: 80px;
+                    font-size: 42px;
                 }
                 p {
                     height: 80px;
                     line-height: 80px;
+                    font-size: 34px;
                 }
                 .Img {
                     height: 330px;
@@ -235,6 +263,7 @@
                     margin-top: 30px;
                     height: 80px;
                     line-height: 80px;
+                    font-size: 38px;
                 }
                 ul {
                     display: flex;
@@ -243,6 +272,8 @@
                         flex: 1;
                         height: 80px;
                         line-height: 80px;
+                        font-size: 34px;
+                        border-bottom: 0 none;
                     }
                 }
             }
@@ -251,6 +282,7 @@
                     margin-top: 30px;
                     height: 80px;
                     line-height: 80px;
+                    font-size: 38px;
                 }
                 ul {
                     border-top: 1px solid #cccccc;
@@ -260,6 +292,8 @@
                         height: 80px;
                         line-height: 80px;
                         color: #333;
+                        font-size: 34px;
+                        border-bottom: 0 none;
                         span:first-child {
                             float: left;
                         }
@@ -274,6 +308,7 @@
                     margin-top: 30px;
                     height: 80px;
                     line-height: 80px;
+                    font-size: 38px;
                 }
                 ul {
                     height: 150px;
@@ -284,6 +319,8 @@
                         flex: 1;
                         padding-top: 80px;
                         text-align: center;
+                        font-size: 34px;
+                        border-bottom: 0 none;
                     }
                 }
             }
@@ -293,78 +330,145 @@
                 h3 {
                     height: 44px;
                     line-height: 44px;
+                    font-size: 38px;
                 }
-                >ul {
-                    padding-top: 20px;
+                .slider-container{
+                    padding-top:20px;
                     display: flex;
-                    >li {
+                    height: 500px;
+                    .slider-touch{
                         flex: 1;
-                        width: 540px;
-                        margin-right: 20px;
-                        .img {
-                            width: 540px;
-                            img {
-                                width: 540px;
+                        
+                        width:640px;
+                        margin-right: 40px;
+                        .img{
+                            width: 640px;
+                            img{
+                                width: 640px;
                                 height: 315px;
                             }
                         }
-                        .mass {
+        
+                        .mass{
                             display: flex;
                             height: 132px;
-                            .like_left {
+                            .like_left{
                                 flex: 1;
-                                padding-top: 15px;
-                                h3 {
+                                padding-top:15px;
+                                h3{
                                     height: 45px;
                                     line-height: 45px;
-                                    color: #333333;
+                                    color:#333333;
                                     font-size: 22px;
-                                    >p {
-                                        color: #84868C;
-                                        font-size: 16px;
+                                    margin-left:-260px;
+                                }
+                                    >p{
+                                        color:#84868C;
+                                        font-size:24px;
+                                        margin-left:-50px;
                                     }
-                                    .star {
-                                        >ul {
-                                            li {
+                                    .star{
+                                        margin-left:20px;
+                                        >ul{
+                                            
+                                            >li{
+                                                margin-left:20px;
                                                 float: left;
-                                                width: 25px;
-                                                height: 25px;
-                                                flex: 1;
-                                                i {
-                                                    color: #F7A621;
+                                                width: 20px;height: 20px;
+                                                i{
+                                                   color:#F7A621;
                                                 }
                                             }
                                         }
                                     }
-                                }
+                                
                             }
-                            .like_right {
+                            .like_right{
                                 width: 196px;
-                                >i {
+                                >i{
                                     display: block;
-                                    width: 55px;
-                                    height: 55px;
+                                    width: 80px;
+                                    height: 80px;
                                     border-radius: 50%;
-                                    background: url('../../assets/like1.jpg');
-                                    margin: 0 auto;
-                                    margin-top: 20px;
-                                }
-                                >button {
-                                    margin-left: 70px;
-                                    border: none;
-                                    width: 60px;
-                                    height: 40px;
-                                    // font-size: 30px;
-                                    border: 2px solid #39B2C6;
-                                    border-left: 1px solid #39B2C6;
-                                    border-right: 1px solid #39B2C6;
-                                    border-radius: 3px;
-                                    background: #fff;
+                                    background:url('../../assets/like1.jpg');
+                                    margin:0 auto;
+                                    margin-top:20px;
                                 }
                             }
                         }
                     }
                 }
+                // >ul {
+                //     padding-top: 20px;
+                //     display: flex;
+                //     >li {
+                //         flex: 1;
+                //         width: 540px;
+                //         margin-right: 20px;
+                //         .img {
+                //             width: 540px;
+                //             img {
+                //                 width: 540px;
+                //                 height: 315px;
+                //             }
+                //         }
+                //         .mass {
+                //             display: flex;
+                //             height: 132px;
+                //             .like_left {
+                //                 flex: 1;
+                //                 padding-top: 15px;
+                //                 h3 {
+                //                     height: 45px;
+                //                     line-height: 45px;
+                //                     color: #333333;
+                //                     font-size: 22px;
+                //                     >p {
+                //                         color: #84868C;
+                //                         font-size: 16px;
+                //                     }
+                //                     .star {
+                //                         >ul {
+                //                             li {
+                //                                 float: left;
+                //                                 width: 25px;
+                //                                 height: 25px;
+                //                                 flex: 1;
+                //                                 i {
+                //                                     color: #F7A621;
+                //                                 }
+                //                             }
+                //                         }
+                //                     }
+                //                 }
+                //             }
+                //             .like_right {
+                //                 width: 196px;
+                //                 >i {
+                //                     display: block;
+                //                     width: 55px;
+                //                     height: 55px;
+                //                     border-radius: 50%;
+                //                     background: url('../../assets/like1.jpg');
+                //                     margin: 0 auto;
+                //                     margin-top: 20px;
+                //                 }
+                //                 >button {
+                //                     margin-left: 70px;
+                //                     border: none;
+                //                     width: 60px;
+                //                     height: 40px;
+                //                     // font-size: 30px;
+                //                     border: 2px solid #39B2C6;
+                //                     border-left: 1px solid #39B2C6;
+                //                     border-right: 1px solid #39B2C6;
+                //                     border-radius: 3px;
+                //                     background: #fff;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
             }
         }
     }

@@ -232,10 +232,11 @@
             gotel() {
                 let that = this;
                 let telValue = that.user_tel;
-                // if(!(/^1(3|4|5|7|8)\d{9}$/.test(telValue))){
-                //     confirm('手机号输入有误!')
-                //     that.user_tel='';
-                // }
+                if(!(/^1(3|4|5|7|8)\d{9}$/.test(telValue))){
+                    confirm('手机号输入有误!')
+                    that.user_tel='';
+                    return ;
+                }
                 // else{
                 //     axios({
                 //         url: '',
@@ -250,9 +251,10 @@
             goname() {
                 let that = this;
                 let nameValue = that.user_name;
-                // if(nameValue===''){
-                //     confirm('姓名不能为空!')
-                // }
+                if(nameValue===''){
+                    confirm('姓名不能为空!')
+                    return;
+                }
                 // else{
                 //     axios({
                 //         url: '',
@@ -304,6 +306,9 @@
                     console.log(this.nowTime[6])
                     console.log(this.user_remark)
                     console.log(this.nowTime[5])
+                    
+                    alert('提交订单成功！');
+                    this.$router.push({path:'/'});
 
                 })
             }

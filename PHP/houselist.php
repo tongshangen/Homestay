@@ -13,11 +13,12 @@
     $wc = isset($_POST["wc"]) ? $_POST["wc"] : '';
     $price1 = isset($_POST["price1"]) ? $_POST["price1"] : '0';
     $price2 = isset($_POST["price2"]) ? $_POST["price2"] : '1500';
-
+    // $price1 = (int)$price1;
+    // $price2 = (int)$price2;
     $sql;
     
     if($check_in != ''|| $check_out != ''){
-        $sql = "select * from  room_type,room where check_in>='$check_in' or check_out >='$check_out' and  room_type.room_type = room.room_type;";
+        $sql = "select * from  room_type,room where check_in >='$check_in' and check_out <='$check_out' and  room_type.room_type = room.room_type;";
     } else if($room_position !=''){                                 
         $sql = "select * from room_type,room WHERE room_position like '%" .$room_position. "%' and  room_type.room_type = room.room_type;";
     } else if($sort !=''){
@@ -42,7 +43,7 @@
             $sql = "select * from room_type,room WHERE  room.price between '$price1' and '$price2' and room.room_type = '$room_type' and  room.max_people >= '$max_people' and  room_type.room_type >= room.room_type ORDER BY  room.room_type;";
 
         } else if($room_type !=''){
-            $sql = "select * from room_type,room WHERE room.price between '$price1' and '$price2' and room.room_type = '$room_type' and  room_type.room_type = room.room_type ORDER BY  room.room_type";
+            $sql = "select * from room_type,room WHERE room.room_type = '$room_type' and  room_type.room_type = room.room_type";
         }
        
     } else {

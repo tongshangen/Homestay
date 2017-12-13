@@ -121,7 +121,7 @@
 
 <script>
     let tableData =[];
-    let base='http://localhost:8088/32/PHP/';
+    let base='http://localhost/wy/PHP/';
      export default {
       data() {
 

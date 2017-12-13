@@ -80,7 +80,7 @@
 		        } else {
 
 		        	$.ajax({
-						url: 'http://localhost:999/PHP/reg.php',
+						url: 'http://localhost:3004/reg.php',
 						type: 'get',
 						data: {user_tel: this.username},
 						success:function(res){
@@ -181,7 +181,7 @@
 		            return false;
 		        };
 				$.ajax({
-					url: 'http://localhost:999/PHP/reg.php',
+					url: 'http://localhost:3004/reg.php',
 					type: 'get',
 					data: {user_tel: this.username, password: this.password, nickname: this.nickname},
 					success:function(re){

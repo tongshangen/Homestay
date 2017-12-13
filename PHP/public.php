@@ -16,10 +16,9 @@
     }
 
      //设置编码
-<<<<<<< HEAD
+
     $conn->set_charset('utf8'); 
-=======
-	$conn->set_charset('utf8'); 
+
+	// $conn->set_charset('utf8'); 
 	
->>>>>>> cts
 ?>
