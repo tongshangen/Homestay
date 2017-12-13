@@ -88,7 +88,7 @@
 					return false;
 				};
 				$.ajax({
-					url: 'http://localhost:999/PHP/login.php',
+					url: 'http://localhost:1133/login.php',
 					type: 'get',
 					data: {user_tel: this.username, password: this.password},
 					success:function(re){

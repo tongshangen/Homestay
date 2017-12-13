@@ -143,11 +143,13 @@
             },
             save: function(){
                 this.$store.state.housefacility.desdata = this.selectdata;
+                localStorage.setItem('dev',this.selectdata)
                 this.$router.push({name:'edithouse'});
             }
         },
         mounted: function(){
-            // console.log(this.selectdata);
+            // this.selectdata = localStorage.getItem('dev');
+            // console.log(this.selectdata.split(','));
         }
     }
 </script>

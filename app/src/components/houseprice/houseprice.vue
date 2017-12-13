@@ -34,8 +34,12 @@
             },
             save: function(){
                 this.$store.state.houseprice.price = this.price;
+                localStorage.setItem('price',this.price);
                 this.$router.push({name:'edithouse'});
             }
+        },
+        mounted: function(){
+            this.price = localStorage.getItem('price');
         }
     }
 </script>

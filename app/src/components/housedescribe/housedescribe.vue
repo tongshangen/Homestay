@@ -64,6 +64,9 @@
                 this.$store.dispatch('increment');
                 this.$router.push({name:'edithouse'});
             }
+        },
+        mounted: function(){
+            this.title = localStorage.getItem('title');
         }
     }
 </script>

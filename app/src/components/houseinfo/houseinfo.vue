@@ -91,8 +91,12 @@
             save: function(){
                 this.$store.state.houseinfo.hx = this.hx;
                 this.$store.state.houseinfo.area = this.area;
+                localStorage.setItem('area',this.area);
                 this.$store.state.houseinfo.peoplenum = this.peoplenum;
+                localStorage.setItem('peoplenum',this.peoplenum);
                 this.$store.state.houseinfo.wcnum = this.wcnum;
+                localStorage.setItem('wc',this.wcnum);
+                localStorage.setItem('bed',this.bednum);
                 this.$store.state.houseinfo.bednum = this.bednum;
                 this.$store.state.houseinfo.staytime = this.staytime; 
                 this.$store.state.houseinfo.leavetime = this.leavetime;   
@@ -139,6 +143,12 @@
             addbed:function(){
                 this.bednum++;
             }
+        },
+        mounted: function(){
+            this.area = localStorage.getItem('area');
+            this.peoplenum = localStorage.getItem('peoplenum');
+            this.wcnum = localStorage.getItem('wc');
+            this.bednum = localStorage.getItem('bed');
         }
     }
 </script>

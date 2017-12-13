@@ -17,6 +17,7 @@ import HouseinfoComponent from '../components/houseinfo/houseinfo.vue'
 import HousepriceComponent from '../components/houseprice/houseprice.vue'
 import HousefacilityComponent from '../components/housefacility/housefacility.vue'
 import MyhouseComponent from '../components/myhouse/myhouse.vue'
+<<<<<<< HEAD
 import DataComponent from '../components/data/data.vue'
 import ListComponent from '../components/houselist/list.vue';
 import RegionComponent from '../components/region/region.vue';
@@ -25,6 +26,9 @@ import SortComponent from '../components/sort/sort.vue';
 import DestinationComponent from '../components/destination/destination.vue';
 import LoginComponent from '../components/login/login.vue';
 import RegisterComponent from '../components/register/register.vue';
+=======
+import MyorderComponent from '../components/myorder/myorder.vue'
+>>>>>>> wy
 
 Vue.use(VueRouter);
 
@@ -136,6 +140,11 @@ var router = new VueRouter({
             path:'/myhouse',
             name: 'myhouse',
             component:MyhouseComponent
+        },
+        {
+            path:'/myorder',
+            name: 'myorder',
+            component:MyorderComponent
         }
     ]
 })

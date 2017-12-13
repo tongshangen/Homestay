@@ -29,7 +29,14 @@
         },
         methods: {
             addhouse: function(){
-                this.$router.push({name:'addhouse'});
+                var s = sessionStorage.getItem("name");
+                console.log(s);
+                if(s == null){
+                    this.$router.push({name:'login'});
+                }else {
+                    this.$router.push({name:'addhouse'});
+                }
+                
             }
         }
     }

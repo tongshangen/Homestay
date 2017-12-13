@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> wy
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -8,8 +12,11 @@ import houseprice from '../components/houseprice/houseprice'
 import houselocation from '../components/addhouselocation/addhouselocation'
 import housefacility from '../components/housefacility/housefacility'
 import addnewhouse from '../components/addnewhouse/addnewhouse'
+// import login from '../components/login/login'
 
 Vue.use(Vuex)
+
+
 
 export default new Vuex.Store({
     modules: {
@@ -21,6 +28,7 @@ export default new Vuex.Store({
         addnewhouse
     }
 })
+<<<<<<< HEAD
 =======
 import Vue from 'vue';
 import Vuex from 'vuex';
@@ -33,3 +41,5 @@ export default new Vuex.Store({
     }
 })
 >>>>>>> 314bb1c2d519fc3eb8c4bd22e6bff301ea229168
+=======
+>>>>>>> wy

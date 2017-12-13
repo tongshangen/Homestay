@@ -6,9 +6,7 @@ const state = {
 
 const mutations = {
     increment: function(){
-        // console.log('increment');
-        // state.count++;
-        // return false;
+        // console.log();
     }
 }
 

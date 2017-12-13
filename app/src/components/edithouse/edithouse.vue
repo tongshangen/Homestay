@@ -95,7 +95,7 @@
                 </li>
             </ul>
             <div class="edit">
-                <input type="button" value="删除房源">
+                <input type="button" value="删除房源" @click="delhouse">
             </div>
         </div>
         <div id="footer_edithouse">
@@ -121,6 +121,7 @@
                 history.back();
             },
             housedescribe: function(){
+                // localStorage.setItem('title',this.$store.state.housedes.title); 
                 this.$router.push({name:'housedescribe'});
             },
             houseinfo: function(){
@@ -133,29 +134,90 @@
                 this.$router.push({name:'housefacility'});
             },
             addhouse: function(){
+                var s = sessionStorage.getItem("name");
                 axios({
-                    url: 'http://localhost:1133/room_wy_insert.php',
+                    url: 'http://localhost:1133/sel_user_id.php',
                     method: 'post',
                     data: qs.stringify({
-                        room_name: this.$store.state.housedes.title,room_position:this.$store.state.houselocation.city,nearby:this.$store.state.houselocation.near,room_size:this.$store.state.houseinfo.area,room_type:this.$store.state.addnewhouse.spacetype,max_people:this.$store.state.houseinfo.peoplenum,price:this.$store.state.houseprice.price,
-                        device:this.$store.state.housefacility.desdata,
-                        bed:this.$store.state.houseinfo.bednum,
-                        wc:this.$store.state.houseinfo.wcnum
+                        user_tel:s
                     }),
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded;'
                     }
                 }).then(res => {
+                    var user_id = res.data[0].user_id;
+                    if(this.$store.state.housedes.title == localStorage.getItem('title')){
+                        axios({
+                            url: 'http://localhost:1133/room_wy_update.php',
+                            method: 'post',
+                            data: qs.stringify({
+                                room_name: localStorage.getItem('title'),room_position:localStorage.getItem('city'),nearby:localStorage.getItem('nearby'),room_size:localStorage.getItem('area'),room_type:localStorage.getItem('spacetype'),max_people:localStorage.getItem('peoplenum'),price:localStorage.getItem('price'),
+                                device:localStorage.getItem('dev'),
+                                bed:localStorage.getItem('bed'),
+                                wc:localStorage.getItem('wc')
+                            }),
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded;'
+                            }
+                        }).then(res => {
+                            console.log(res);
+                            if(res.data == 'ok'){
+                                this.$router.push({name:'main_wy'});
+                            }else{
+                                alert('修改房源信息有误！');
+                            }
+                            
+                        })
+                    }else{
+                        axios({
+                            url: 'http://localhost:1133/room_wy_insert.php',
+                            method: 'post',
+                            data: qs.stringify({
+                                room_name: this.$store.state.housedes.title,room_position:this.$store.state.houselocation.city,nearby:this.$store.state.houselocation.near,room_size:this.$store.state.houseinfo.area,room_type:this.$store.state.addnewhouse.spacetype,max_people:this.$store.state.houseinfo.peoplenum,price:this.$store.state.houseprice.price,
+                                device:this.$store.state.housefacility.desdata,
+                                bed:this.$store.state.houseinfo.bednum,
+                                wc:this.$store.state.houseinfo.wcnum,
+                                user_id:user_id
+                            }),
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded;'
+                            }
+                        }).then(res => {
+                            console.log(res);
+                            if(res.data == 'ok'){
+                                this.$router.push({name:'main_wy'});
+                            }else{
+                                alert('添加房源信息有误！');
+                            }
+                            
+                        })
+                    }                 
+                    
+                })
+                
+            },
+            delhouse:function(){
+                axios({
+                    url: 'http://localhost:1133/room_wy_del.php',
+                    method: 'post',
+                    data: qs.stringify({
+                        room_name: this.$store.state.housedes.title
+                    }),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;'
+                    }
+                }).then(res => {
+                    // console.log(res);
                     if(res.data == 'ok'){
                         this.$router.push({name:'main_wy'});
                     }else{
-                        alert('添加房源信息有误！');
+                        alert('删除房源信息有误！');
                     }
                     
                 })
             },
             handleRemove(file, fileList) {
-                console.log(file, fileList);
+                // console.log(file, fileList);
             },
             handlePictureCardPreview(file) {
                 this.dialogImageUrl = file.url;
@@ -163,10 +225,18 @@
             }
         },
         mounted: function(){
-            // this.title = localStorage.getItem('title');
-            // console.log(this);
-            // console.log(this.$store.state.housedes,this.$store.state.houseinfo,this.$store.state.houselocation,this.$store.state.houseprice,this.$store.state.housefacility);
+            // localStorage.setItem('title',this.$store.state.housedes.title); 
+            // localStorage.setItem('city',this.$store.state.houselocation.city);
+            // localStorage.setItem('nearby',this.$store.state.houselocation.near);
+            // localStorage.setItem('area',this.$store.state.houselocation.area);
+            // localStorage.setItem('spacetype',this.$store.state.houselocation.spacetype);
+            // localStorage.setItem('peoplenum',this.$store.state.houselocation.peoplenum);
+            // localStorage.setItem('price',this.$store.state.houselocation.price);
+            // localStorage.setItem('dev',this.$store.state.houselocation.desdata);
+            // localStorage.setItem('bed',this.$store.state.houselocation.bed);
+            // localStorage.setItem('wc',this.$store.state.houselocation.wc);
         }
     }
 </script>
+
 

@@ -3,9 +3,9 @@ header('Access-Control-Allow-Origin:*');
 
     include "DBHelper.php";
   
-    $user_id = isset($_POST["user_id"]) ? $_POST["user_id"] : '';
+    $user_tel = isset($_POST["user_tel"]) ? $_POST["user_tel"] : '';
 
-    $sql = "select * from room where user_id = $user_id";
+    $sql = "select user_id from user where user_tel =  '$user_tel'";
 
     $result = query($sql);
 

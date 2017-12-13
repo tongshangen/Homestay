@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin:*');
   
     $user_id = isset($_POST["user_id"]) ? $_POST["user_id"] : '';
 
-    $sql = "select * from room where user_id = $user_id";
+    $sql = "select * from orders where user_id = $user_id";
 
     $result = query($sql);
 

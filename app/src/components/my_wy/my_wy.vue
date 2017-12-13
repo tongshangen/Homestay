@@ -9,11 +9,11 @@
         <div id="main">
             <div class="main_header">
                 <a><img src="../../assets/logo_wy.png" alt=""></a>
-                <a><span>登录/注册</span></a>
+                <a><span>{{login}}</span></a>
             </div>
             <div class="main_con">
                 <ul>
-                    <li>
+                    <li @click="order">
                         <i class="el-icon-printer"></i>
                         <span>我的订单</span>
                         <i class="el-icon-arrow-right"></i>
@@ -33,7 +33,23 @@
 
     export default {
         name: 'nav',
-        components: {
+        data: function(){
+            return{
+                login:'登录/注册'
+            }
+        },
+        methods: {
+            order: function(){
+                this.$router.push({name:'main_wy'});
+            }
+        },
+        mounted: function(){
+            var s = sessionStorage.getItem("name");
+            if(s){
+                this.login = '已登录';
+            }else{
+                this.$router.push({name:'login'});
+            }
         }
     }
 </script>
