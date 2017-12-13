@@ -24,8 +24,8 @@ import RegionComponent from '../components/region/region.vue';
 import FiltrateComponent from '../components/filtrate/filtrate.vue';
 import SortComponent from '../components/sort/sort.vue';
 import DestinationComponent from '../components/destination/destination.vue';
-import LoginComponent from '../components/login/login.vue';
-import RegisterComponent from '../components/register/register.vue';
+// import LoginComponent from '../components/login/login.vue';
+// import RegisterComponent from '../components/register/register.vue';
 import MyorderComponent from '../components/myorder/myorder.vue'
 
 Vue.use(VueRouter);
