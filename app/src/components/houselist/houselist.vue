@@ -2,90 +2,45 @@
 	<div class="Main">
         <div class="top">
             <header>
-                <i class="el-icon-back"></i>
-                <h3>北京</h3>
+               <!-- <router-link to="/houselist/list"><i class="el-icon-back" @click="aa"> </i></router-link> -->
+               <i class="el-icon-back" @click="back"> </i>
+                <h3>{{ reg }}</h3>
             </header>
             <div class="manues">
                 <ul>
-                    <li>日期<i class="el-icon-arrow-down"></i></li>
-                    <li>区域<i class="el-icon-arrow-down"></i></li>
-                    <li>筛选<i class="el-icon-arrow-down"></i></li>
-                    <li>排序<i class="el-icon-arrow-down"></i></li>
-                    
+                    <li><router-link to="/houselist/data">日期<i class="el-icon-arrow-down"></i></router-link></li> 
+                    <li><router-link :to="{name:'region',query: {reg: reg }}">区域<i class="el-icon-arrow-down"></i></router-link></li>
+                    <li><router-link :to="{name: 'filtrate'}">筛选<i class="el-icon-arrow-down"></i></router-link></li>
+                    <li><router-link to="/houselist/sort">排序<i class="el-icon-arrow-down"></i></router-link></li>
                 </ul>
             </div>
         </div>
-        <div class="main">
-            <div class="bottom">
-                <ul>
-                    <li>
-                            <div class="housing">
-                                <i class="el-icon-star-on"></i>
-                                <img src="../../assets/housing1.jpg">
-                                <span class="price">7481</span>
-                                <i class="touxiang"></i>
-                            </div>
-                            <h3>新世界旁30平米大房子舒适温馨</h3>
-                            <p>整套-2张床-可住2人北京市</p>    
-                            <div class="star">
-                                <ul>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                </ul>
-                                <p class="pinjia">15人评价</p>
-                            </div> 
-                    </li>
-                        <li>
-                            <div class="housing">
-                                <i class="el-icon-star-on"></i>
-                                <img src="../../assets/housing1.jpg">
-                                <span class="price">7481</span>
-                                <i class="touxiang"></i>
-                            </div>
-                            <h3>新世界旁30平米大房子舒适温馨</h3>
-                            <p>整套-2张床-可住2人北京市</p>    
-                            <div class="star">
-                                <ul>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                </ul>
-                                <p class="pinjia">15人评价</p>
-                            </div> 
-                    </li>
-                        <li>
-                            <div class="housing">
-                                <i class="el-icon-star-on"></i>
-                                <img src="../../assets/housing1.jpg">
-                                <span class="price">7481</span>
-                                <i class="touxiang"></i>
-                            </div>
-                            <h3>新世界旁30平米大房子舒适温馨</h3>
-                            <p>整套-2张床-可住2人北京市</p>    
-                            <div class="star">
-                                <ul>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                    <li><i class="el-icon-star-on"></i></li>
-                                </ul>
-                                <p class="pinjia">15人评价</p>
-                            </div> 
-                    </li>
-                </ul>
-            </div>
-        </div>
-		
+        <router-view></router-view>
 	</div>
 </template>
 <script>
-    import './houselist.scss'
+  
+    import './houselist.scss';
+
     export default {
+        data:function(){
+            return {
+                reg:'',
+            }
+        },
+        methods:{
+            back:function(){
+                // console.log(this.$route.path)
+                if(this.$route.path=='/houselist/list'){
+                    this.$router.push({name:'main'})
+                }else{
+                    this.$router.push({name:'list'})
+                }
+            }
+        },
+        mounted: function(){
+            this.reg = this.$route.query.room_position;
+        }   
     }
+
 </script>

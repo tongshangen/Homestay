@@ -17,6 +17,14 @@ import HouseinfoComponent from '../components/houseinfo/houseinfo.vue'
 import HousepriceComponent from '../components/houseprice/houseprice.vue'
 import HousefacilityComponent from '../components/housefacility/housefacility.vue'
 import MyhouseComponent from '../components/myhouse/myhouse.vue'
+import DataComponent from '../components/data/data.vue'
+import ListComponent from '../components/houselist/list.vue';
+import RegionComponent from '../components/region/region.vue';
+import FiltrateComponent from '../components/filtrate/filtrate.vue';
+import SortComponent from '../components/sort/sort.vue';
+import DestinationComponent from '../components/destination/destination.vue';
+import LoginComponent from '../components/login/login.vue';
+import RegisterComponent from '../components/register/register.vue';
 
 Vue.use(VueRouter);
 
@@ -30,12 +38,44 @@ var router = new VueRouter({
         {
             path: '/houselist',
             name: 'houselist',
-            component: HouselistComponent
+            component:HouselistComponent,
+            children:[
+                {
+                    path: 'data',
+                    name: 'data',
+                    component: DataComponent 
+                },
+                {
+                    path: 'list',
+                    name: 'list',
+                    component: ListComponent 
+                },
+                {
+                    path: 'region',
+                    name: 'region',
+                    component: RegionComponent 
+                },
+                {
+                    path: 'filtrate',
+                    name: 'filtrate',
+                    component: FiltrateComponent 
+                },
+                {
+                    path: 'sort',
+                    name: 'sort',
+                    component: SortComponent 
+                }
+            ] 
         },
         {
             path: '/housedetails',
             name: 'housedetails',
             component: HousedetailsComponent
+        },
+        {
+            path: '/destination',
+            name: 'destination',
+            component: DestinationComponent
         },
         {
             path: '/register',
@@ -97,7 +137,6 @@ var router = new VueRouter({
             name: 'myhouse',
             component:MyhouseComponent
         }
-        
     ]
 })
 

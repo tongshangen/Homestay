@@ -6,13 +6,19 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --port 8081 --open --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --port 8081 --host 10.3.135.223 --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "axios": "^0.17.1",
     "element-ui": "^2.0.7",
+<<<<<<< HEAD
     "vue": "^2.4.4"
+=======
+    "vue": "^2.4.4",
+    "vue-concise-slider": "^2.3.0",
+    "vuex": "^3.0.1"
+>>>>>>> 314bb1c2d519fc3eb8c4bd22e6bff301ea229168
   },
   "browserslist": [
     "> 1%",

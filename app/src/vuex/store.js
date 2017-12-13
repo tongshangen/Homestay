@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -20,3 +21,15 @@ export default new Vuex.Store({
         addnewhouse
     }
 })
+=======
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+import login from '../components/login/login'
+
+export default new Vuex.Store({
+    modules: {
+        login
+    }
+})
+>>>>>>> 314bb1c2d519fc3eb8c4bd22e6bff301ea229168

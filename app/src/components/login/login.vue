@@ -96,6 +96,8 @@
 						if(re=='true'){
 							$('.msg').show();
 							$('.msg')[0].innerHTML=('登录成功');
+							// sessionStorage.setItem("user_tel","username");
+							sessionStorage.setItem("name", username); 
 							setTimeout(function(){
 								router.push({name: 'main'});
 							},1000)
