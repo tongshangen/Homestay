@@ -1,0 +1,88 @@
+.Destination{
+    height: 100%;
+    flex: 1;
+    // overflow-x: hidden;
+    flex-direction:column;
+    display: flex;
+    .sherch{
+        // flex: 0.1;
+        height: 100px;
+        position: relative;
+        border-bottom:1px solid #ccc;
+        input{
+            width: 600px;
+            height: 80px;
+            padding-left:70px;
+            margin:10px 30px;
+            font-size: 30px;
+            border: none;
+            // border-bottom:1px solid #ccc;
+        }
+        i{
+            position: absolute;
+            font-size: 50px;
+            top:20px;
+            left:40px;
+        }
+        span{
+            position: absolute;
+            right: 100px;
+            top:30px;
+            font-size: 30px;
+        }
+    }
+    .Citys{
+        flex: 1;
+        overflow-x: hidden;
+        .hot_citys{
+            h3{
+                height: 60px;
+                background-color:#eee;
+                color:#666;
+                line-height: 60px;
+                padding-left:30px;
+                font-size: 40px;
+            }
+            ul{
+                height: 350px;
+                padding-top:30px;
+                li{
+                    float: left;
+                    line-height: 60px;
+                    text-align: center;
+                    height: 60px;
+                    width: 150px;
+                    font-size: 30px;
+                    border-bottom: 0 none;
+                }
+            }
+        }
+    
+        .citys{
+            >ul{
+                >li{
+                    span{
+                        display: block;
+                        padding-left: 30px;
+                        background-color:#eee;
+                        height: 50px;
+                        line-height: 50px;
+                        border-bottom: 0 none;
+                    }
+                    >ul{
+                        padding:10px 0;
+                        >li{
+                            padding-left: 50px;
+                            font-size: 16px;
+                            height: 70px;
+                            line-height: 70px;
+                            border-bottom: 0 none;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}

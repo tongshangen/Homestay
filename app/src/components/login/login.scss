@@ -1,0 +1,107 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app,
+.Lmain {
+  width: 100%;
+  height: 100%;
+}
+
+.Lmain {
+  display: flex;
+  flex-direction: column;
+}
+
+.Lheader {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  .Lleft {
+    flex: 2;
+    text-align: center;
+    font-size: 48px;
+    color: #F84340;
+  }
+  .Llogins {
+    flex: 6;
+    text-align: center;
+    font-size: 36px;
+    color: #F84340;
+  }
+  .Lregister {
+    flex: 2;
+    text-align: center;
+    font-size: 36px;
+    color: #311f1f;
+  }
+}
+
+.Lcenter {
+  flex: 12;
+  .Llogo {
+    margin: 48px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .Luser {
+    margin: 180px 12% 0 12%;
+    font-size: 38px;
+    height: 100px;
+    line-height: 100px;
+    color: #bb7d7d;
+    #Lusername {
+      padding-left: 15px;
+      width: 76%;
+      height: 60px;
+      line-height: 60px;
+      font-size: 28px;
+      border: none;
+      border-bottom: 1px solid #876b6b;
+    }
+  }
+  .Lpsw {
+    margin: 0px 12%;
+    margin-top: 20px;
+    font-size: 38px;
+    height: 100px;
+    line-height: 100px;
+    color: #bb7d7d;
+    #Lpassword {
+      padding-left: 15px;
+      width: 76%;
+      height: 60px;
+      line-height: 60px;
+      font-size: 28px;
+      border: none;
+      border-bottom: 1px solid #876b6b;
+    }
+  }
+  .Llogin {
+    margin: 0px 15%;
+    margin-top: 40px;
+    font-size: 38px;
+    height: 100px;
+    line-height: 100px;
+    color: #bb7d7d;
+    .login {
+      padding-left: 15px;
+      width: 100%;
+      font-size: 38px;
+    }
+  }
+  .msg {
+    display: none;
+    width: 70%;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    color: #f42828;
+  }
+}

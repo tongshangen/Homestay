@@ -1,0 +1,238 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app,
+.Main {
+    width: 100%;
+    height: 100%;
+}
+
+.Main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    height: 80px;
+    header {
+        height: 80px;
+        position: relative;
+        i {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        h3 {
+            text-align: center;
+            padding-top: 20px;
+            font-family: "FangSong";
+            font-size: 50px;
+        }
+    }
+}
+
+.main {
+    flex: 1;
+    .bottom {
+        overflow: hidden;
+        height: 2100px;
+        .details_msg {
+            ul {
+                li {
+                    padding: 0 0 0 30px;
+                    height: 132px;
+                    border-bottom: 1px solid #cccccc;
+                    span {
+                        display: block;
+                        width: 200px;
+                        height: 131px;
+                        line-height: 130px;
+                        font-family: "FangSong";
+                        font-size: 38px;
+                        font-weight: bold;
+                        float: left;
+                    }
+                    h2 {
+                        line-height: 130px;
+                        font-weight: normal;
+                        font-size: 30px;
+                    }
+                }
+                li:first-child {
+                    height: 240px;
+                    padding-top: 25px;
+                    img {
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    h4 {
+                        font-size: 30px;
+                    }
+                    p {
+                        line-height: 40px;
+                        font-size: 30px;
+                    }
+                    em {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .number {
+            height: 150px;
+            text-align: center;
+            padding-top: 50px;
+            padding-left: 30px;
+            position: relative;
+            p {
+                font-size: 38px;
+                font-family: "FangSong";
+                float: left;
+                font-weight: bold;
+            }
+            .number_people {
+                position: absolute;
+                top: 35px;
+                left: 230px;
+            }
+            .el-input-number__increase,
+            .el-input-number__decrease {
+                height: 77px;
+                line-height: 77px;
+                font-size: 30px;
+            }
+            .el-input__inner {
+                height: 80px;
+                font-size: 30px;
+            }
+        }
+        .kong {
+            height: 31px;
+            background: #F9F7F7;
+            // border-bottom: 1px solid #ccc;
+        }
+        .in_time {
+            padding-top: 50px;
+            height: 191px;
+            border-bottom: 1px solid #ccc;
+            padding-left: 30px;
+            font-size: 38px;
+            font-weight: bold;
+            font-family: "FangSong";
+            padding-bottom: 20px;
+            .el-date-editor {
+                height: 100px;
+                width: 500px;
+            }
+            .el-input__icon {
+                width: 40px;
+                font-size: 40px;
+                color: #000;
+            }
+            .el-range-input {
+                font-size: 30px;
+                color: #000;
+            }
+            .el-range-separator {
+                width: 50px;
+                font-size: 30px;
+            }
+            .el-picker-panel__content {
+                font-size: 30px;
+            }
+        }
+        .total_price {
+            height: 518px;
+            padding: 0 30px;
+            .price_top {
+                height: 150px;
+                border-bottom: 1px solid #ccc;
+                line-height: 130px;
+                .pt_left {
+                    width: 40%;
+                    float: left;
+                    height: 130px;
+                    h3{
+                        font-size: 38px;
+                        // width: 200px;
+                    }
+                }
+                .pt_right {
+                    width: 60%;
+                    padding-left: 40%;
+                    float: right;
+                    height: 130px;
+                    color: #F84340;
+                    font-size: 38px;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        right: 90px;
+                    }
+                    p {
+                        float: right;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .price_bottom {
+                // height: 3px;
+                ul {
+                    li {
+                        height: 65px;
+                        line-height: 65px;
+                        color: #000;
+                        font-weight: bold;
+                        border-bottom: 0 none;
+                        p {
+                            font-size: 30px;
+                            float: left;
+                            margin-right: 20px;
+                        }
+                        span {
+                            // float: right;
+                            display: inline-block;
+                            font-size: 30px;
+                            height: 65px;
+                            line-height: 65px;
+
+                        }
+                    }
+                }
+            }
+        }
+        .information {
+            height: 400px;
+            padding-top: 10px;
+            padding: 0 20px;
+            h3 {
+                line-height: 40px;
+                font-size: 40px;
+                text-align: center;
+                font-family: "FangSong";
+            }
+            div {
+                height: 120px;
+                line-height: 120px;
+                label {
+                    display: inline-block;
+                    width: 140px;
+                    text-align: right;
+                    font-size: 30px;
+                }
+                input {
+                    height: 80px;
+                    width: 500px;
+                    margin-left: 20px;
+                    font-size: 30px;
+                    border: 1px solid #bbb;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

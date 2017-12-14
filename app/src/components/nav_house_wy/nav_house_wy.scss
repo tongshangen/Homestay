@@ -1,0 +1,18 @@
+.el-tabs__nav{
+    #tab-first,#tab-second,#tab-third{
+        font-size: 30px;
+    }
+    
+}
+.el-tabs__nav-next, .el-tabs__nav-prev{
+    display: none;
+}
+.el-tabs__item.is-active{
+    color: #ff6163;
+}
+.el-tabs__active-bar {
+    background: #ff6163;
+}
+// #nav_house{
+//     margin-top: 100px;
+// }

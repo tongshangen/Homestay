@@ -1,0 +1,30 @@
+
+    ul{
+        
+        li{
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            .order_header{
+                h3{
+                    font-size: 36px;
+                    font-weight: normal;
+                    margin-bottom: 5px;
+                }
+            }
+            .order_main{
+                font-size: 28px;
+                overflow: hidden;
+                .order_main_l{
+                    float: left;
+                }
+                .order_main_r{
+                    float: right;
+                    img{
+                        width: 100px;
+                        height: 60px;
+                    }
+                    
+                }
+            }
+        }
+    }
